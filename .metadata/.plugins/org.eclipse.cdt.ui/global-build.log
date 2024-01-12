@@ -1,0 +1,20 @@
+20:18:40 **** Build of configuration Debug for project phal_stm32f4x_driver ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/main.c:22:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   22 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "phal_stm32f4x_driver.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\my_computer\Project_STM32_Driver\phal_stm32f4x_driver\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="phal_stm32f4x_driver.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: phal_stm32f4x_driver.elf
+ 
+arm-none-eabi-size  phal_stm32f4x_driver.elf 
+arm-none-eabi-objdump -h -S phal_stm32f4x_driver.elf  > "phal_stm32f4x_driver.list"
+   text	   data	    bss	    dec	    hex	filename
+    644	      8	   1568	   2220	    8ac	phal_stm32f4x_driver.elf
+Finished building: default.size.stdout
+ 
+Finished building: phal_stm32f4x_driver.list
+ 
