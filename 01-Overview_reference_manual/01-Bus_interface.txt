@@ -1,0 +1,12 @@
+MCU Bus interfaces:
+
+* Processor: ARM Cortex - M4
+* I-BUS, D-BUS, S-BUS.
+* I-BUS: Stands for Instruction Bus.
+* D-BUS: Stands for the Data Bus
+* S-BUS: Stands for System Bus.
+
+ 
+
+
+

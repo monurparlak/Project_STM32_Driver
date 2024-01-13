@@ -1,0 +1,14 @@
+Clock:
+
+* Criystal Oscillator is external.
+* RCC (Reset and Clock Control) Oscillator is internal
+* PLL (Phase Locked Loop) is internal
+
+* HSE (High Speed External)
+* HSI (High Speed Internal)
+* LSE (Low Speed External)
+* LSI (Low Speed Internal)
+
+
+
+

@@ -1,0 +1,29 @@
+STM32F4 Based on:
+
+1- What's the base address of AHB1 BUS peripherals?
+* AHB1 Start of Address: 0x4002 0000
+* AHB1 End of Address  : 0x4007 FFFF
+
+2- What's the base address of APB1 peripherals?
+* APB1 Start of Address: 0x4000 0000
+* APB1 End of Address  : 0x4000 7FFF
+
+3- What's the base address of GPIOA registers?
+* GPIOA Start of Address: 0x4002 0000
+* GPIOA End of Address  : 0x4002 03FF
+
+4- What's the base address of RCC engine registers of the MCU?
+* RCC Start of Address: 0x4002 3800
+* RCC End of Address  : 0x4002 3BFF
+
+5- What's the base address of ADC registers?
+* ADC Start of Address: 0x4001 2000
+* ADC End of Address  : 0x4001 23FF
+
+6- What's the base address of FLASH memory?
+* FLASH Start of Address: 0x0800 0000
+* FLASH End of Address  : 0x080F FFFF
+
+7- What's the base address of SRAM2?
+* SRAM2 Start of Address: 0x2001 C000
+* SRAM2 End of Address  : 0x2001 FFFF
