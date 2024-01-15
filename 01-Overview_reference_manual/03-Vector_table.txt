@@ -1,0 +1,5 @@
+What is vector table?
+* Direction (pointers or addresses)
+* Contains ISR addresses of all system exceptions and interrupts supported by the microcontroller.
+* Contains processor system exceptions and interrupts (IRQs)
+* Weak functions: Its cna be overridden by the programmer in there main code.

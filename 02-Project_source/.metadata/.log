@@ -1,0 +1,39 @@
+!SESSION 2024-01-13 21:18:41.787 -----------------------------------------------
+eclipse.buildId=Version 1.14.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=tr_TR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-01-13 21:19:00.791
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-01-13 21:19:00.806
+!MESSAGE Log4j2 initialized with config file D:\my_computer\Project_STM32_Driver\02-Project_source\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-01-13 21:19:06.652
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-01-15 20:03:58.313 -----------------------------------------------
+eclipse.buildId=Version 1.14.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=tr_TR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-01-15 20:04:34.204
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-01-15 20:04:34.269
+!MESSAGE Log4j2 initialized with config file D:\my_computer\Project_STM32_Driver\02-Project_source\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-01-15 20:04:42.632
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-01-15 21:01:38.506
+!MESSAGE Indexed 'phal_driver_stm32f4x' (3 sources, 53 headers) in 4.8 sec: 1,950 declarations; 2,832 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-01-15 21:03:29.438
+!MESSAGE Indexed 'phal_driver_stm32f4x' (3 sources, 53 headers) in 0.661 sec: 1,950 declarations; 2,832 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-01-15 21:20:31.125
+!MESSAGE Indexed 'phal_driver_stm32f4x' (3 sources, 54 headers) in 0.457 sec: 1,950 declarations; 2,833 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.042%)
