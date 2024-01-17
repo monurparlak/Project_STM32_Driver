@@ -23,6 +23,12 @@
 
 #define phal_vo     volatile
 
+#define ENABLE      1
+#define DISABLE     0
+
+#define GPIO_SET    1
+#define GPIO_RESET  0
+
 /* 
  * Memory Addresses
  */
@@ -97,6 +103,7 @@ typedef struct {
    phal_vo uint32_t BSRR;          /**< TODO: Do Something */
    phal_vo uint32_t LCKR;          /**< TODO: Do Something */
    phal_vo uint32_t AFR[2];        /**< TODO: Do Something */
+
 }gpio_reg_def_t;
 /* 
  * RCC register definition
@@ -131,6 +138,7 @@ typedef struct {
     phal_vo uint32_t DCKCFGR;       /**< RCC Dedicated Clock Configuration Register */
     phal_vo uint32_t CKGATENR;      /**< RCC Clocks Gated Enable Register */
     phal_vo uint32_t DCKCFGR2;      /**< RCC Dedicated Clock Configuration Register 2 */
+
 } rcc_reg_def_t;
 
 /* 
