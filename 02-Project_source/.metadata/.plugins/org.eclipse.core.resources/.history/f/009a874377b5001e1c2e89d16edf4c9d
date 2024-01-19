@@ -1,0 +1,137 @@
+/*
+ * phal_generic_stm32f4x.h
+ *
+ *  Created on: Jan 15, 2024
+ *      Author: monurparlak@gmail.com
+ *  
+ *  Purpose:
+ *
+ */
+
+/*****************************************************************************/
+/**< Includes */
+/*****************************************************************************/
+
+#include "phal_gpio_stm32f4x.h"
+
+/*****************************************************************************/
+/**< Function Definitions */
+/*****************************************************************************/
+
+void phal_gpio_clock_control(gpio_reg_def_t *p_gpiox, bool activite)
+{
+    if(ENABLE == activite)
+    {
+    	switch (p_gpiox)
+    	{
+        case GPIO_PORTA:
+            GPIO_PORTA_CLK_EN();
+            break;
+        case GPIO_PORTB:
+            GPIO_PORTB_CLK_EN();
+            break;
+        case GPIO_PORTC:
+            GPIO_PORTC_CLK_EN();
+            break;
+        case GPIO_PORTD:
+            GPIO_PORTD_CLK_EN();
+            break;
+        case GPIO_PORTE:
+            GPIO_PORTE_CLK_EN();
+            break;
+        case GPIO_PORTF:
+            GPIO_PORTF_CLK_EN();
+            break;
+        case GPIO_PORTG:
+            GPIO_PORTG_CLK_EN();
+            break;
+        case GPIO_PORTI:
+            GPIO_PORTI_CLK_EN();
+            break;
+
+        default:
+            break;
+    	}
+    }
+}
+
+void phal_gpio_init(gpio_handle_t *p_gpio_handle)
+{
+	uint32_t temp = 0;
+
+    if(GPIO_MODE_AN >= p_gpio_handle->gpio_pin_config.gpio_pin_mode)
+    {
+    	temp = (p_gpio_handle->gpio_pin_config.gpio_pin_mode
+    			<< (2 * p_gpio_handle->gpio_pin_config.gpio_pin_no));
+    	p_gpio_handle->p_gpio_portx->MODER = temp;
+    }
+    else
+    {
+    	/* TODO: Do Something */
+    }
+
+	temp = 0;
+
+    temp = (p_gpio_handle->gpio_pin_config.gpio_pin_speed << (2 * p_gpio_handle->gpio_pin_config.gpio_pin_no));
+    p_gpio_handle->p_gpio_portx->OSPEEDR = temp;
+    temp = 0;
+
+    temp = (p_gpio_handle->gpio_pin_config.gpio_pin_pupd << (2 * p_gpio_handle->gpio_pin_config.gpio_pin_no));
+    p_gpio_handle->p_gpio_portx->PUPDR = temp;
+    temp = 0;
+
+    temp = (p_gpio_handle->gpio_pin_config.gpio_pin_optype << p_gpio_handle->gpio_pin_config.gpio_pin_no);
+    p_gpio_handle->p_gpio_portx->OTYPER |= temp;
+    temp = 0;
+
+    if (GPIO_MODE_AF == p_gpio_handle->gpio_pin_config.gpio_pin_mode)
+    {
+        uint32_t af_register = p_gpio_handle->gpio_pin_config.gpio_pin_no / 8;
+        uint32_t af_offset = (p_gpio_handle->gpio_pin_config.gpio_pin_no % 8) * 4;
+
+        temp = (p_gpio_handle->gpio_pin_config.gpio_pin_af << af_offset);
+        p_gpio_handle->p_gpio_portx->AFR[af_register] |= temp;
+    }
+
+    temp = 0;
+}
+
+void phal_gpio_deinit(gpio_reg_def_t *p_gpiox)
+{
+    /**< Do something */
+}
+
+uint8_t phal_gpio_read_pin(gpio_reg_def_t *p_gpiox, uint8_t pin_no)
+{
+    /**< Do something */
+}
+
+uint16_t phal_gpio_read_port(gpio_reg_def_t *p_gpiox)
+{
+    /**< Do something */
+}
+
+void phal_gpio_write_pin(gpio_reg_def_t *p_gpiox, uint8_t pin_no, uint8_t value)
+{
+    /**< Do something */
+}
+
+void phal_gpio_toggle_pin(gpio_reg_def_t *p_gpiox, uint8_t pin_no)
+{
+    /**< Do something */
+}
+
+void phal_gpio_write_port(gpio_reg_def_t *p_gpiox, uint8_t value)
+{
+    /**< Do something */
+}
+
+void phal_gpio_irq(uint8_t irq_no, uint8_t irq_priority, uint8_t activite)
+{
+    /**< Do something */
+}
+
+void phal_gpio_irq_handle(uint8_t pin_no)
+{
+    /**< Do something */
+}

@@ -17,6 +17,8 @@
 
 #include <stdint.h>
 
+#include "stm32f407xx.h"
+
 /*****************************************************************************/
 /**< Macros */
 /*****************************************************************************/
@@ -29,84 +31,85 @@
 #define GPIO_SET    1
 #define GPIO_RESET  0
 
-/* 
- * Memory Addresses
+/** 
+ * @brief Memory Addresses
  */
-#define FLASH_ADDR      0x08000000U     /**< TODO: Do Something */
-#define SRAM1_ADDR      0x20000000U     /**< TODO: Do Something */
-#define SRAM2_ADDR      0x20001C00U     /**< TODO: Do Something */
-#define ROM_ADDR        0x1FFF0000U     /**< TODO: Do Something */
-#define SRAM            SRAM1_ADDR      /**< TODO: Do Something */
+#define FLASH_ADDR      0x08000000U
+#define SRAM1_ADDR      0x20000000U
+#define SRAM2_ADDR      0x20001C00U
+#define ROM_ADDR        0x1FFF0000U
+#define SRAM            SRAM1_ADDR 
 
-/* 
- * AHBx and APBx Addresses
+/** 
+ * @brief AHBx and APBx Addresses
  */
-#define PERIPHERAL_ADDR         0x40000000U         /**< TODO: Do Something */
-#define AHB1_PERIPHERAL_ADDR    PERIPHERAL_ADDR     /**< TODO: Do Something */
-#define AHB2_PERIPHERAL_ADDR    0x40010000U         /**< TODO: Do Something */
-#define APB1_PERIPHERAL_ADDR    0x40020000U         /**< TODO: Do Something */
-#define APB2_PERIPHERAL_ADDR    0x50000000U         /**< TODO: Do Something */
+#define PERIPHERAL_ADDR         0x40000000U    
+#define AHB1_PERIPHERAL_ADDR    PERIPHERAL_ADDR
+#define AHB2_PERIPHERAL_ADDR    0x40010000U    
+#define APB1_PERIPHERAL_ADDR    0x40020000U    
+#define APB2_PERIPHERAL_ADDR    0x50000000U    
 
-/* 
- * AHB1 Block Addresses
+/** 
+ * @brief AHB1 Block Addresses
  */
-#define GPIO_PORTA_ADDR     (AHB1_PERIPHERAL_ADDR + 0x0000U)      /**< TODO: Do Something */
-#define GPIO_PORTB_ADDR     (AHB1_PERIPHERAL_ADDR + 0x0400U)      /**< TODO: Do Something */
-#define GPIO_PORTC_ADDR     (AHB1_PERIPHERAL_ADDR + 0x0800U)      /**< TODO: Do Something */
-#define GPIO_PORTD_ADDR     (AHB1_PERIPHERAL_ADDR + 0x0C00U)      /**< TODO: Do Something */
-#define GPIO_PORTE_ADDR     (AHB1_PERIPHERAL_ADDR + 0x1000U)      /**< TODO: Do Something */
-#define GPIO_PORTF_ADDR     (AHB1_PERIPHERAL_ADDR + 0x1400U)      /**< TODO: Do Something */
-#define GPIO_PORTG_ADDR     (AHB1_PERIPHERAL_ADDR + 0x1800U)      /**< TODO: Do Something */
-#define GPIO_PORTH_ADDR     (AHB1_PERIPHERAL_ADDR + 0x1C00U)      /**< TODO: Do Something */
-#define GPIO_PORTI_ADDR     (AHB1_PERIPHERAL_ADDR + 0x2000U)      /**< TODO: Do Something */
+#define GPIO_PORTA_ADDR     (AHB1_PERIPHERAL_ADDR + 0x0000U)
+#define GPIO_PORTB_ADDR     (AHB1_PERIPHERAL_ADDR + 0x0400U)
+#define GPIO_PORTC_ADDR     (AHB1_PERIPHERAL_ADDR + 0x0800U)
+#define GPIO_PORTD_ADDR     (AHB1_PERIPHERAL_ADDR + 0x0C00U)
+#define GPIO_PORTE_ADDR     (AHB1_PERIPHERAL_ADDR + 0x1000U)
+#define GPIO_PORTF_ADDR     (AHB1_PERIPHERAL_ADDR + 0x1400U)
+#define GPIO_PORTG_ADDR     (AHB1_PERIPHERAL_ADDR + 0x1800U)
+#define GPIO_PORTH_ADDR     (AHB1_PERIPHERAL_ADDR + 0x1C00U)
+#define GPIO_PORTI_ADDR     (AHB1_PERIPHERAL_ADDR + 0x2000U)
 
-#define RCC_ADDR            (AHB1_PERIPHERAL_ADDR + 0x2000U)      /**< TODO: Do Something */
+#define RCC_ADDR            (AHB1_PERIPHERAL_ADDR + 0x2000U)
 
-/* 
- * APB1 Block Addresses
+/** 
+ * @brief APB1 Block Addresses
  */
-#define I2C1_ADDR       (APB1_PERIPHERAL_ADDR + 0x5400U)     /**< TODO: Do Something */
-#define I2C2_ADDR       (APB1_PERIPHERAL_ADDR + 0x5800U)     /**< TODO: Do Something */
-#define I2C3_ADDR       (APB1_PERIPHERAL_ADDR + 0x5C00U)     /**< TODO: Do Something */
+#define I2C1_ADDR       (APB1_PERIPHERAL_ADDR + 0x5400U)
+#define I2C2_ADDR       (APB1_PERIPHERAL_ADDR + 0x5800U)
+#define I2C3_ADDR       (APB1_PERIPHERAL_ADDR + 0x5C00U)
 
-#define SPI1_ADDR       (APB1_PERIPHERAL_ADDR + 0x3800U)     /**< TODO: Do Something */
-#define SPI2_ADDR       (APB1_PERIPHERAL_ADDR + 0x3C00U)     /**< TODO: Do Something */
+#define SPI1_ADDR       (APB1_PERIPHERAL_ADDR + 0x3800U)
+#define SPI2_ADDR       (APB1_PERIPHERAL_ADDR + 0x3C00U)
 
-#define USART2_ADDR     (APB1_PERIPHERAL_ADDR + 0x4400U)     /**< TODO: Do Something */
-#define USART3_ADDR     (APB1_PERIPHERAL_ADDR + 0x4800U)     /**< TODO: Do Something */
-#define UART4_ADDR      (APB1_PERIPHERAL_ADDR + 0x4C00U)     /**< TODO: Do Something */
-#define UART5_ADDR      (APB1_PERIPHERAL_ADDR + 0x5000U)     /**< TODO: Do Something */
+#define USART2_ADDR     (APB1_PERIPHERAL_ADDR + 0x4400U)
+#define USART3_ADDR     (APB1_PERIPHERAL_ADDR + 0x4800U)
+#define UART4_ADDR      (APB1_PERIPHERAL_ADDR + 0x4C00U)
+#define UART5_ADDR      (APB1_PERIPHERAL_ADDR + 0x5000U)
 
-/* 
- * APB2 Block Addresses
+/** 
+ * @brief APB2 Block Addresses
  */
-#define EXTI_ADDR       (APB2_PERIPHERAL_ADDR + 0x3C00U)     /**< TODO: Do Something */
-#define SPI1_ADDR       (APB2_PERIPHERAL_ADDR + 0x3000U)     /**< TODO: Do Something */
-#define SYSCFG_ADDR     (APB2_PERIPHERAL_ADDR + 0x3800U)     /**< TODO: Do Something */
-#define USART1_ADDR     (APB2_PERIPHERAL_ADDR + 0x1000U)     /**< TODO: Do Something */
-#define USART6_ADDR     (APB2_PERIPHERAL_ADDR + 0x1400U)     /**< TODO: Do Something */
+#define EXTI_ADDR       (APB2_PERIPHERAL_ADDR + 0x3C00U)
+#define SPI3_ADDR       (APB2_PERIPHERAL_ADDR + 0x3000U)
+#define SYSCFG_ADDR     (APB2_PERIPHERAL_ADDR + 0x3800U)
+#define USART1_ADDR     (APB2_PERIPHERAL_ADDR + 0x1000U)
+#define USART6_ADDR     (APB2_PERIPHERAL_ADDR + 0x1400U)
 
 /*****************************************************************************/
 /**< Typedef Structures */
 /*****************************************************************************/
 
-/* 
- * GPIO register definition
+/** 
+ * @brief GPIO register definition
  */
 typedef struct {
-   phal_vo uint32_t MODER;         /**< TODO: Do Something */
-   phal_vo uint32_t OTYPER;        /**< TODO: Do Something */
-   phal_vo uint32_t OSPEEDR;       /**< TODO: Do Something */
-   phal_vo uint32_t PUPDR;         /**< TODO: Do Something */
-   phal_vo uint32_t IDR;           /**< TODO: Do Something */
-   phal_vo uint32_t ODR;           /**< TODO: Do Something */
-   phal_vo uint32_t BSRR;          /**< TODO: Do Something */
-   phal_vo uint32_t LCKR;          /**< TODO: Do Something */
-   phal_vo uint32_t AFR[2];        /**< TODO: Do Something */
+    phal_vo uint32_t MODER;         /**< GPIO Port Mode Register */
+    phal_vo uint32_t OTYPER;        /**< GPIO Port Output Type Register */
+    phal_vo uint32_t OSPEEDR;       /**< GPIO Port Output Speed Register */
+    phal_vo uint32_t PUPDR;         /**< GPIO Port Pull-Up/Pull-Down Register */
+    phal_vo uint32_t IDR;           /**< GPIO Port Input Data Register */
+    phal_vo uint32_t ODR;           /**< GPIO Port Output Data Register */
+    phal_vo uint32_t BSRR;          /**< GPIO Port Bit Set/Reset Register */
+    phal_vo uint32_t LCKR;          /**< GPIO Port Configuration Lock Register */
+    phal_vo uint32_t AFR[2];        /**< GPIO Alternate Function Low/High Register */
 
-}gpio_reg_def_t;
-/* 
- * RCC register definition
+} gpio_reg_def_t;
+
+/** 
+ * @brief RCC register definition
  */
 typedef struct {
     phal_vo uint32_t AHB1RSTR;      /**< RCC AHB1 Peripheral Reset Register */
@@ -141,23 +144,23 @@ typedef struct {
 
 } rcc_reg_def_t;
 
-/* 
- * GPIO peripheral definition
+/** 
+ * @brief GPIO peripheral definition
  */
-#define GPIO_PORTA  ((gpio_reg_def_t*) GPIO_PORTA_ADDR)  /**< TODO: Do Something */
-#define GPIO_PORTB  ((gpio_reg_def_t*) GPIO_PORTB_ADDR)  /**< TODO: Do Something */
-#define GPIO_PORTC  ((gpio_reg_def_t*) GPIO_PORTC_ADDR)  /**< TODO: Do Something */
-#define GPIO_PORTD  ((gpio_reg_def_t*) GPIO_PORTD_ADDR)  /**< TODO: Do Something */
-#define GPIO_PORTE  ((gpio_reg_def_t*) GPIO_PORTE_ADDR)  /**< TODO: Do Something */
-#define GPIO_PORTF  ((gpio_reg_def_t*) GPIO_PORTF_ADDR)  /**< TODO: Do Something */
-#define GPIO_PORTG  ((gpio_reg_def_t*) GPIO_PORTG_ADDR)  /**< TODO: Do Something */
-#define GPIO_PORTH  ((gpio_reg_def_t*) GPIO_PORTH_ADDR)  /**< TODO: Do Something */
-#define GPIO_PORTI  ((gpio_reg_def_t*) GPIO_PORTI_ADDR)  /**< TODO: Do Something */
+#define GPIO_PORTA  ((gpio_reg_def_t*) GPIO_PORTA_ADDR)
+#define GPIO_PORTB  ((gpio_reg_def_t*) GPIO_PORTB_ADDR)
+#define GPIO_PORTC  ((gpio_reg_def_t*) GPIO_PORTC_ADDR)
+#define GPIO_PORTD  ((gpio_reg_def_t*) GPIO_PORTD_ADDR)
+#define GPIO_PORTE  ((gpio_reg_def_t*) GPIO_PORTE_ADDR)
+#define GPIO_PORTF  ((gpio_reg_def_t*) GPIO_PORTF_ADDR)
+#define GPIO_PORTG  ((gpio_reg_def_t*) GPIO_PORTG_ADDR)
+#define GPIO_PORTH  ((gpio_reg_def_t*) GPIO_PORTH_ADDR)
+#define GPIO_PORTI  ((gpio_reg_def_t*) GPIO_PORTI_ADDR)
 
-#define RCC         ((rcc_reg_def_t*) RCC_ADDR)  /**< TODO: Do Something */
+#define RCC         ((rcc_reg_def_t*) RCC_ADDR)  /**< RCC Register */
 
-/* 
- * Clock enable for GPIO peripheral definition
+/** 
+ * @brief Clock enable for GPIO peripheral definition
  */
 #define GPIO_PORTA_CLK_EN()     (RC->AHB1ENR |= (1 << 0))
 #define GPIO_PORTB_CLK_EN()     (RC->AHB1ENR |= (1 << 1))
@@ -168,23 +171,23 @@ typedef struct {
 #define GPIO_PORTG_CLK_EN()     (RC->AHB1ENR |= (1 << 6))
 #define GPIO_PORTI_CLK_EN()     (RC->AHB1ENR |= (1 << 7))
 
-/* 
- * Clock enable for I2C peripheral definition
+/** 
+ * @brief Clock enable for I2C peripheral definition
  */
 #define I2C1_ADDR_CLK_EN()       (RCC->APB1ENR |= (1 << 21))
 #define I2C2_ADDR_CLK_EN()       (RCC->APB1ENR |= (1 << 22))
 #define I2C3_ADDR_CLK_EN()       (RCC->APB1ENR |= (1 << 23))
 
-/* 
- * Clock enable for SPI peripheral definition
+/** 
+ * @brief Clock enable for SPI peripheral definition
  */
 #define SPI1_ADDR_CLK_EN()       (RCC->APB2ENR |= (1 << 12))
 #define SPI2_ADDR_CLK_EN()       (RCC->APB2ENR |= (1 << 14))
 #define SPI3_ADDR_CLK_EN()       (RCC->APB2ENR |= (1 << 15))
 #define SPI4_ADDR_CLK_EN()       (RCC->APB2ENR |= (1 << 13))
 
-/* 
- * Clock enable for USART peripheral definition
+/** 
+ * @brief Clock enable for USART peripheral definition
  */
 #define USART1_ADDR_CLK_EN()    (RCC->APB2ENR |= (1 << 4))
 #define USART2_ADDR_CLK_EN()    (RCC->APB2ENR |= (1 << 17))
@@ -193,47 +196,51 @@ typedef struct {
 #define UART5_ADDR_CLK_EN()     (RCC->APB2ENR |= (1 << 20))
 #define USART6_ADDR_CLK_EN()    (RCC->APB2ENR |= (1 << 5))
 
-/* 
- * Clock disable for GPIO peripheral definition
+/** 
+ * @brief Clock disable for GPIO peripheral definition
  */
-#define GPIO_PORTA_CLK_EN()     (RC->AHB1ENR &= ~(1 << 0))
-#define GPIO_PORTB_CLK_EN()     (RC->AHB1ENR &= ~(1 << 1))
-#define GPIO_PORTC_CLK_EN()     (RC->AHB1ENR &= ~(1 << 2))
-#define GPIO_PORTD_CLK_EN()     (RC->AHB1ENR &= ~(1 << 3))
-#define GPIO_PORTE_CLK_EN()     (RC->AHB1ENR &= ~(1 << 4))
-#define GPIO_PORTF_CLK_EN()     (RC->AHB1ENR &= ~(1 << 5))
-#define GPIO_PORTG_CLK_EN()     (RC->AHB1ENR &= ~(1 << 6))
-#define GPIO_PORTI_CLK_EN()     (RC->AHB1ENR &= ~(1 << 7))
+#define GPIO_PORTA_CLK_DIS()     (RC->AHB1ENR &= ~(1 << 0))
+#define GPIO_PORTB_CLK_DIS()     (RC->AHB1ENR &= ~(1 << 1))
+#define GPIO_PORTC_CLK_DIS()     (RC->AHB1ENR &= ~(1 << 2))
+#define GPIO_PORTD_CLK_DIS()     (RC->AHB1ENR &= ~(1 << 3))
+#define GPIO_PORTE_CLK_DIS()     (RC->AHB1ENR &= ~(1 << 4))
+#define GPIO_PORTF_CLK_DIS()     (RC->AHB1ENR &= ~(1 << 5))
+#define GPIO_PORTG_CLK_DIS()     (RC->AHB1ENR &= ~(1 << 6))
+#define GPIO_PORTI_CLK_DIS()     (RC->AHB1ENR &= ~(1 << 7))
 
-/* 
- * Clock disable for I2C peripheral definition
+/** 
+ * @brief Clock disable for I2C peripheral definition
  */
-#define I2C1_ADDR_CLK_EN()       (RCC->APB1ENR &= ~(1 << 21))
-#define I2C2_ADDR_CLK_EN()       (RCC->APB1ENR &= ~(1 << 22))
-#define I2C3_ADDR_CLK_EN()       (RCC->APB1ENR &= ~(1 << 23))
+#define I2C1_ADDR_CLK_DIS()       (RCC->APB1ENR &= ~(1 << 21))
+#define I2C2_ADDR_CLK_DIS()       (RCC->APB1ENR &= ~(1 << 22))
+#define I2C3_ADDR_CLK_DIS()       (RCC->APB1ENR &= ~(1 << 23))
 
-/* 
- * Clock disable for SPI peripheral definition
+/** 
+ * @brief Clock disable for SPI peripheral definition
  */
-#define SPI1_ADDR_CLK_EN()       (RCC->APB2ENR &= ~(1 << 12))
-#define SPI2_ADDR_CLK_EN()       (RCC->APB2ENR &= ~(1 << 14))
-#define SPI3_ADDR_CLK_EN()       (RCC->APB2ENR &= ~(1 << 15))
-#define SPI4_ADDR_CLK_EN()       (RCC->APB2ENR &= ~(1 << 13))
+#define SPI1_ADDR_CLK_DIS()       (RCC->APB2ENR &= ~(1 << 12))
+#define SPI2_ADDR_CLK_DIS()       (RCC->APB2ENR &= ~(1 << 14))
+#define SPI3_ADDR_CLK_DIS()       (RCC->APB2ENR &= ~(1 << 15))
+#define SPI4_ADDR_CLK_DIS()       (RCC->APB2ENR &= ~(1 << 13))
 
-/* 
- * Clock disable for USART peripheral definition
+/** 
+ * @brief Clock disable for USART peripheral definition
  */
-#define USART1_ADDR_CLK_EN()    (RCC->APB2ENR &= ~(1 << 4))
-#define USART2_ADDR_CLK_EN()    (RCC->APB2ENR &= ~(1 << 17))
-#define USART3_ADDR_CLK_EN()    (RCC->APB2ENR &= ~(1 << 18))
-#define UART4_ADDR_CLK_EN()     (RCC->APB2ENR &= ~(1 << 19))
-#define UART5_ADDR_CLK_EN()     (RCC->APB2ENR &= ~(1 << 20))
-#define USART6_ADDR_CLK_EN()    (RCC->APB2ENR &= ~(1 << 5))
+#define USART1_ADDR_CLK_DIS()    (RCC->APB2ENR &= ~(1 << 4))
+#define USART2_ADDR_CLK_DIS()    (RCC->APB2ENR &= ~(1 << 17))
+#define USART3_ADDR_CLK_DIS()    (RCC->APB2ENR &= ~(1 << 18))
+#define UART4_ADDR_CLK_DIS()     (RCC->APB2ENR &= ~(1 << 19))
+#define UART5_ADDR_CLK_DIS()     (RCC->APB2ENR &= ~(1 << 20))
+#define USART6_ADDR_CLK_DIS()    (RCC->APB2ENR &= ~(1 << 5))
 
-
-
-
-
-
+#define GPIO_PORTA_REG_RESET()  do{(RCC->AHB1RSTR |= (1 << 0));  (RCC->AHB1RSTR &= ~(1 << 0)); } while(0)
+#define GPIO_PORTB_REG_RESET()  do{(RCC->AHB1RSTR |= (1 << 1));  (RCC->AHB1RSTR &= ~(1 << 1)); } while(0)
+#define GPIO_PORTC_REG_RESET()  do{(RCC->AHB1RSTR |= (1 << 2));  (RCC->AHB1RSTR &= ~(1 << 2)); } while(0)
+#define GPIO_PORTD_REG_RESET()  do{(RCC->AHB1RSTR |= (1 << 3));  (RCC->AHB1RSTR &= ~(1 << 3)); } while(0)
+#define GPIO_PORTE_REG_RESET()  do{(RCC->AHB1RSTR |= (1 << 4));  (RCC->AHB1RSTR &= ~(1 << 4)); } while(0)
+#define GPIO_PORTF_REG_RESET()  do{(RCC->AHB1RSTR |= (1 << 5));  (RCC->AHB1RSTR &= ~(1 << 5)); } while(0)
+#define GPIO_PORTG_REG_RESET()  do{(RCC->AHB1RSTR |= (1 << 6));  (RCC->AHB1RSTR &= ~(1 << 6)); } while(0)
+#define GPIO_PORTH_REG_RESET()  do{(RCC->AHB1RSTR |= (1 << 7));  (RCC->AHB1RSTR &= ~(1 << 7)); } while(0)
+#define GPIO_PORTI_REG_RESET()  do{(RCC->AHB1RSTR |= (1 << 8));  (RCC->AHB1RSTR &= ~(1 << 8)); } while(0)
 
 #endif /* INC_PHAL_GENERIC_STM32F4X_H_ */

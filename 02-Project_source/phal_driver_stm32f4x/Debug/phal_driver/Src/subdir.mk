@@ -5,13 +5,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../phal_driver/Src/phal_generic_stm32f4x.c 
+../phal_driver/Src/phal_generic_stm32f4x.c \
+../phal_driver/Src/phal_gpio_stm32f4x.c 
 
 OBJS += \
-./phal_driver/Src/phal_generic_stm32f4x.o 
+./phal_driver/Src/phal_generic_stm32f4x.o \
+./phal_driver/Src/phal_gpio_stm32f4x.o 
 
 C_DEPS += \
-./phal_driver/Src/phal_generic_stm32f4x.d 
+./phal_driver/Src/phal_generic_stm32f4x.d \
+./phal_driver/Src/phal_gpio_stm32f4x.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +24,7 @@ phal_driver/Src/%.o phal_driver/Src/%.su phal_driver/Src/%.cyclo: ../phal_driver
 clean: clean-phal_driver-2f-Src
 
 clean-phal_driver-2f-Src:
-	-$(RM) ./phal_driver/Src/phal_generic_stm32f4x.cyclo ./phal_driver/Src/phal_generic_stm32f4x.d ./phal_driver/Src/phal_generic_stm32f4x.o ./phal_driver/Src/phal_generic_stm32f4x.su
+	-$(RM) ./phal_driver/Src/phal_generic_stm32f4x.cyclo ./phal_driver/Src/phal_generic_stm32f4x.d ./phal_driver/Src/phal_generic_stm32f4x.o ./phal_driver/Src/phal_generic_stm32f4x.su ./phal_driver/Src/phal_gpio_stm32f4x.cyclo ./phal_driver/Src/phal_gpio_stm32f4x.d ./phal_driver/Src/phal_gpio_stm32f4x.o ./phal_driver/Src/phal_gpio_stm32f4x.su
 
 .PHONY: clean-phal_driver-2f-Src
 
