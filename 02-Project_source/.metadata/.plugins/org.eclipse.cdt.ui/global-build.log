@@ -5,3 +5,415 @@ rm -rf ./Startup/startup_stm32f407vgtx.d ./Startup/startup_stm32f407vgtx.o
 rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
 rm -rf default.size.stdout phal_driver_stm32f4x.elf phal_driver_stm32f4x.list phal_driver_stm32f4x.map
  
+21:55:28 **** Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-gcc "../phal_driver/Src/phal_generic_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_generic_stm32f4x.d" -MT"phal_driver/Src/phal_generic_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_generic_stm32f4x.o"
+arm-none-eabi-gcc "../phal_driver/Src/phal_gpio_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_gpio_stm32f4x.d" -MT"phal_driver/Src/phal_gpio_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_gpio_stm32f4x.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:21:
+D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_generic_stm32f4x.h:20:10: fatal error: stm32f407xx.h: No such file or directory
+   20 | #include "stm32f407xx.h"
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+In file included from D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_gpio_stm32f4x.h:18,
+                 from ../phal_driver/Src/phal_gpio_stm32f4x.c:15:
+D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_generic_stm32f4x.h:20:10: fatal error: stm32f407xx.h: No such file or directory
+   20 | #include "stm32f407xx.h"
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [phal_driver/Src/subdir.mk:22: phal_driver/Src/phal_gpio_stm32f4x.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+21:56:51 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-gcc "../phal_driver/Src/phal_gpio_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_gpio_stm32f4x.d" -MT"phal_driver/Src/phal_gpio_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_gpio_stm32f4x.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+In file included from ../phal_driver/Src/phal_gpio_stm32f4x.c:15:
+D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_gpio_stm32f4x.h:123:55: error: unknown type name 'bool'
+  123 | void phal_gpio_clock_control(gpio_reg_def_t *p_gpiox, bool activite);
+      |                                                       ^~~~
+D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_gpio_stm32f4x.h:19:1: note: 'bool' is defined in header '<stdbool.h>'; did you forget to '#include <stdbool.h>'?
+   18 | #include "phal_generic_stm32f4x.h"
+  +++ |+#include <stdbool.h>
+   19 | 
+../phal_driver/Src/phal_gpio_stm32f4x.c:21:55: error: unknown type name 'bool'
+   21 | void phal_gpio_clock_control(gpio_reg_def_t *p_gpiox, bool activite)
+      |                                                       ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:16:1: note: 'bool' is defined in header '<stdbool.h>'; did you forget to '#include <stdbool.h>'?
+   15 | #include "phal_gpio_stm32f4x.h"
+  +++ |+#include <stdbool.h>
+   16 | 
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_init':
+../phal_driver/Src/phal_gpio_stm32f4x.c:93:48: error: 'gpio_pin_config_t' has no member named 'gpio_pin_af'; did you mean 'gpio_pin_no'?
+   93 |         temp = (p_gpio_handle->gpio_pin_config.gpio_pin_af << af_offset);
+      |                                                ^~~~~~~~~~~
+      |                                                gpio_pin_no
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_deinit':
+../phal_driver/Src/phal_gpio_stm32f4x.c:100:17: error: switch quantity not an integer
+  100 |         switch (p_gpiox)
+      |                 ^~~~~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:102:9: error: pointers are not permitted as case values
+  102 |         case GPIO_PORTA:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:105:9: error: pointers are not permitted as case values
+  105 |         case GPIO_PORTB:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:108:9: error: pointers are not permitted as case values
+  108 |         case GPIO_PORTC:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:111:9: error: pointers are not permitted as case values
+  111 |         case GPIO_PORTD:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:114:9: error: pointers are not permitted as case values
+  114 |         case GPIO_PORTE:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:117:9: error: pointers are not permitted as case values
+  117 |         case GPIO_PORTF:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:120:9: error: pointers are not permitted as case values
+  120 |         case GPIO_PORTG:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:123:9: error: pointers are not permitted as case values
+  123 |         case GPIO_PORTI:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_write_pin':
+../phal_driver/Src/phal_gpio_stm32f4x.c:152:12: error: 'GPIO_PIN_SET' undeclared (first use in this function); did you mean 'GPIO_PIN_11'?
+  152 |         if(GPIO_PIN_SET == value)
+      |            ^~~~~~~~~~~~
+      |            GPIO_PIN_11
+../phal_driver/Src/phal_gpio_stm32f4x.c:152:12: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [phal_driver/Src/subdir.mk:22: phal_driver/Src/phal_gpio_stm32f4x.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+21:57:31 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-gcc "../phal_driver/Src/phal_gpio_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_gpio_stm32f4x.d" -MT"phal_driver/Src/phal_gpio_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_gpio_stm32f4x.o"
+In file included from ../phal_driver/Src/phal_gpio_stm32f4x.c:15:
+D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_gpio_stm32f4x.h:123:55: error: unknown type name 'bool'
+  123 | void phal_gpio_clock_control(gpio_reg_def_t *p_gpiox, bool activite);
+      |                                                       ^~~~
+D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_gpio_stm32f4x.h:19:1: note: 'bool' is defined in header '<stdbool.h>'; did you forget to '#include <stdbool.h>'?
+   18 | #include "phal_generic_stm32f4x.h"
+  +++ |+#include <stdbool.h>
+   19 | 
+../phal_driver/Src/phal_gpio_stm32f4x.c:21:55: error: unknown type name 'bool'
+   21 | void phal_gpio_clock_control(gpio_reg_def_t *p_gpiox, bool activite)
+      |                                                       ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:16:1: note: 'bool' is defined in header '<stdbool.h>'; did you forget to '#include <stdbool.h>'?
+   15 | #include "phal_gpio_stm32f4x.h"
+  +++ |+#include <stdbool.h>
+   16 | 
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_deinit':
+../phal_driver/Src/phal_gpio_stm32f4x.c:100:17: error: switch quantity not an integer
+  100 |         switch (p_gpiox)
+      |                 ^~~~~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:102:9: error: pointers are not permitted as case values
+  102 |         case GPIO_PORTA:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:105:9: error: pointers are not permitted as case values
+  105 |         case GPIO_PORTB:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:108:9: error: pointers are not permitted as case values
+  108 |         case GPIO_PORTC:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:111:9: error: pointers are not permitted as case values
+  111 |         case GPIO_PORTD:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:114:9: error: pointers are not permitted as case values
+  114 |         case GPIO_PORTE:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:117:9: error: pointers are not permitted as case values
+  117 |         case GPIO_PORTF:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:120:9: error: pointers are not permitted as case values
+  120 |         case GPIO_PORTG:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:123:9: error: pointers are not permitted as case values
+  123 |         case GPIO_PORTI:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_write_pin':
+../phal_driver/Src/phal_gpio_stm32f4x.c:152:12: error: 'GPIO_PIN_SET' undeclared (first use in this function); did you mean 'GPIO_PIN_11'?
+  152 |         if(GPIO_PIN_SET == value)
+      |            ^~~~~~~~~~~~
+      |            GPIO_PIN_11
+../phal_driver/Src/phal_gpio_stm32f4x.c:152:12: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [phal_driver/Src/subdir.mk:22: phal_driver/Src/phal_gpio_stm32f4x.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+21:59:22 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-gcc "../phal_driver/Src/phal_gpio_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_gpio_stm32f4x.d" -MT"phal_driver/Src/phal_gpio_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_gpio_stm32f4x.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_clock_control':
+../phal_driver/Src/phal_gpio_stm32f4x.c:25:17: error: switch quantity not an integer
+   25 |         switch (p_gpiox)
+      |                 ^~~~~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:27:9: error: pointers are not permitted as case values
+   27 |         case GPIO_PORTA:
+      |         ^~~~
+In file included from D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_gpio_stm32f4x.h:18,
+                 from ../phal_driver/Src/phal_gpio_stm32f4x.c:15:
+D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_generic_stm32f4x.h:168:34: error: 'RC' undeclared (first use in this function); did you mean 'RCC'?
+  168 | #define GPIO_PORTA_CLK_EN()     (RC->AHB1ENR |= (1 << 0))
+      |                                  ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c:28:13: note: in expansion of macro 'GPIO_PORTA_CLK_EN'
+   28 |             GPIO_PORTA_CLK_EN();
+      |             ^~~~~~~~~~~~~~~~~
+D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_generic_stm32f4x.h:168:34: note: each undeclared identifier is reported only once for each function it appears in
+  168 | #define GPIO_PORTA_CLK_EN()     (RC->AHB1ENR |= (1 << 0))
+      |                                  ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c:28:13: note: in expansion of macro 'GPIO_PORTA_CLK_EN'
+   28 |             GPIO_PORTA_CLK_EN();
+      |             ^~~~~~~~~~~~~~~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:30:9: error: pointers are not permitted as case values
+   30 |         case GPIO_PORTB:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:33:9: error: pointers are not permitted as case values
+   33 |         case GPIO_PORTC:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:36:9: error: pointers are not permitted as case values
+   36 |         case GPIO_PORTD:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:39:9: error: pointers are not permitted as case values
+   39 |         case GPIO_PORTE:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:42:9: error: pointers are not permitted as case values
+   42 |         case GPIO_PORTF:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:45:9: error: pointers are not permitted as case values
+   45 |         case GPIO_PORTG:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:48:9: error: pointers are not permitted as case values
+   48 |         case GPIO_PORTI:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_deinit':
+../phal_driver/Src/phal_gpio_stm32f4x.c:100:17: error: switch quantity not an integer
+  100 |         switch (p_gpiox)
+      |                 ^~~~~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:102:9: error: pointers are not permitted as case values
+  102 |         case GPIO_PORTA:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:105:9: error: pointers are not permitted as case values
+  105 |         case GPIO_PORTB:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:108:9: error: pointers are not permitted as case values
+  108 |         case GPIO_PORTC:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:111:9: error: pointers are not permitted as case values
+  111 |         case GPIO_PORTD:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:114:9: error: pointers are not permitted as case values
+  114 |         case GPIO_PORTE:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:117:9: error: pointers are not permitted as case values
+  117 |         case GPIO_PORTF:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:120:9: error: pointers are not permitted as case values
+  120 |         case GPIO_PORTG:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:123:9: error: pointers are not permitted as case values
+  123 |         case GPIO_PORTI:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_write_pin':
+../phal_driver/Src/phal_gpio_stm32f4x.c:152:12: error: 'GPIO_PIN_SET' undeclared (first use in this function); did you mean 'GPIO_PIN_11'?
+  152 |         if(GPIO_PIN_SET == value)
+      |            ^~~~~~~~~~~~
+      |            GPIO_PIN_11
+make: *** [phal_driver/Src/subdir.mk:22: phal_driver/Src/phal_gpio_stm32f4x.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+21:59:43 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-gcc "../phal_driver/Src/phal_gpio_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_gpio_stm32f4x.d" -MT"phal_driver/Src/phal_gpio_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_gpio_stm32f4x.o"
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_clock_control':
+../phal_driver/Src/phal_gpio_stm32f4x.c:27:9: error: pointers are not permitted as case values
+   27 |         case GPIO_PORTA:
+      |         ^~~~
+In file included from D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_gpio_stm32f4x.h:18,
+                 from ../phal_driver/Src/phal_gpio_stm32f4x.c:15:
+D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_generic_stm32f4x.h:168:34: error: 'RC' undeclared (first use in this function); did you mean 'RCC'?
+  168 | #define GPIO_PORTA_CLK_EN()     (RC->AHB1ENR |= (1 << 0))
+      |                                  ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c:28:13: note: in expansion of macro 'GPIO_PORTA_CLK_EN'
+   28 |             GPIO_PORTA_CLK_EN();
+      |             ^~~~~~~~~~~~~~~~~
+D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_generic_stm32f4x.h:168:34: note: each undeclared identifier is reported only once for each function it appears in
+  168 | #define GPIO_PORTA_CLK_EN()     (RC->AHB1ENR |= (1 << 0))
+      |                                  ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c:28:13: note: in expansion of macro 'GPIO_PORTA_CLK_EN'
+   28 |             GPIO_PORTA_CLK_EN();
+      |             ^~~~~~~~~~~~~~~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:30:9: error: pointers are not permitted as case values
+   30 |         case GPIO_PORTB:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:33:9: error: pointers are not permitted as case values
+   33 |         case GPIO_PORTC:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:36:9: error: pointers are not permitted as case values
+   36 |         case GPIO_PORTD:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:39:9: error: pointers are not permitted as case values
+   39 |         case GPIO_PORTE:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:42:9: error: pointers are not permitted as case values
+   42 |         case GPIO_PORTF:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:45:9: error: pointers are not permitted as case values
+   45 |         case GPIO_PORTG:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:48:9: error: pointers are not permitted as case values
+   48 |         case GPIO_PORTI:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_deinit':
+../phal_driver/Src/phal_gpio_stm32f4x.c:100:17: error: switch quantity not an integer
+  100 |         switch (p_gpiox)
+      |                 ^~~~~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:102:9: error: pointers are not permitted as case values
+  102 |         case GPIO_PORTA:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:105:9: error: pointers are not permitted as case values
+  105 |         case GPIO_PORTB:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:108:9: error: pointers are not permitted as case values
+  108 |         case GPIO_PORTC:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:111:9: error: pointers are not permitted as case values
+  111 |         case GPIO_PORTD:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:114:9: error: pointers are not permitted as case values
+  114 |         case GPIO_PORTE:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:117:9: error: pointers are not permitted as case values
+  117 |         case GPIO_PORTF:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:120:9: error: pointers are not permitted as case values
+  120 |         case GPIO_PORTG:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:123:9: error: pointers are not permitted as case values
+  123 |         case GPIO_PORTI:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_write_pin':
+../phal_driver/Src/phal_gpio_stm32f4x.c:152:12: error: 'GPIO_PIN_SET' undeclared (first use in this function); did you mean 'GPIO_PIN_11'?
+  152 |         if(GPIO_PIN_SET == value)
+      |            ^~~~~~~~~~~~
+      |            GPIO_PIN_11
+make: *** [phal_driver/Src/subdir.mk:22: phal_driver/Src/phal_gpio_stm32f4x.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+22:00:36 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-gcc "../phal_driver/Src/phal_gpio_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_gpio_stm32f4x.d" -MT"phal_driver/Src/phal_gpio_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_gpio_stm32f4x.o"
+In file included from D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_gpio_stm32f4x.h:18,
+                 from ../phal_driver/Src/phal_gpio_stm32f4x.c:15:
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_clock_control':
+D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_generic_stm32f4x.h:168:34: error: 'RC' undeclared (first use in this function); did you mean 'RCC'?
+  168 | #define GPIO_PORTA_CLK_EN()     (RC->AHB1ENR |= (1 << 0))
+      |                                  ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c:30:13: note: in expansion of macro 'GPIO_PORTA_CLK_EN'
+   30 |             GPIO_PORTA_CLK_EN();
+      |             ^~~~~~~~~~~~~~~~~
+D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_generic_stm32f4x.h:168:34: note: each undeclared identifier is reported only once for each function it appears in
+  168 | #define GPIO_PORTA_CLK_EN()     (RC->AHB1ENR |= (1 << 0))
+      |                                  ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c:30:13: note: in expansion of macro 'GPIO_PORTA_CLK_EN'
+   30 |             GPIO_PORTA_CLK_EN();
+      |             ^~~~~~~~~~~~~~~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_deinit':
+../phal_driver/Src/phal_gpio_stm32f4x.c:102:17: error: switch quantity not an integer
+  102 |         switch (p_gpiox)
+      |                 ^~~~~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:104:9: error: pointers are not permitted as case values
+  104 |         case GPIO_PORTA:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:107:9: error: pointers are not permitted as case values
+  107 |         case GPIO_PORTB:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:110:9: error: pointers are not permitted as case values
+  110 |         case GPIO_PORTC:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:113:9: error: pointers are not permitted as case values
+  113 |         case GPIO_PORTD:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:116:9: error: pointers are not permitted as case values
+  116 |         case GPIO_PORTE:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:119:9: error: pointers are not permitted as case values
+  119 |         case GPIO_PORTF:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:122:9: error: pointers are not permitted as case values
+  122 |         case GPIO_PORTG:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c:125:9: error: pointers are not permitted as case values
+  125 |         case GPIO_PORTI:
+      |         ^~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_write_pin':
+../phal_driver/Src/phal_gpio_stm32f4x.c:154:12: error: 'GPIO_PIN_SET' undeclared (first use in this function); did you mean 'GPIO_PIN_11'?
+  154 |         if(GPIO_PIN_SET == value)
+      |            ^~~~~~~~~~~~
+      |            GPIO_PIN_11
+make: *** [phal_driver/Src/subdir.mk:22: phal_driver/Src/phal_gpio_stm32f4x.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+22:01:48 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-gcc "../phal_driver/Src/phal_gpio_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_gpio_stm32f4x.d" -MT"phal_driver/Src/phal_gpio_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_gpio_stm32f4x.o"
+In file included from D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_gpio_stm32f4x.h:18,
+                 from ../phal_driver/Src/phal_gpio_stm32f4x.c:15:
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_clock_control':
+D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_generic_stm32f4x.h:168:34: error: 'RC' undeclared (first use in this function); did you mean 'RCC'?
+  168 | #define GPIO_PORTA_CLK_EN()     (RC->AHB1ENR |= (1 << 0))
+      |                                  ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c:30:13: note: in expansion of macro 'GPIO_PORTA_CLK_EN'
+   30 |             GPIO_PORTA_CLK_EN();
+      |             ^~~~~~~~~~~~~~~~~
+D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_generic_stm32f4x.h:168:34: note: each undeclared identifier is reported only once for each function it appears in
+  168 | #define GPIO_PORTA_CLK_EN()     (RC->AHB1ENR |= (1 << 0))
+      |                                  ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c:30:13: note: in expansion of macro 'GPIO_PORTA_CLK_EN'
+   30 |             GPIO_PORTA_CLK_EN();
+      |             ^~~~~~~~~~~~~~~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_write_pin':
+../phal_driver/Src/phal_gpio_stm32f4x.c:162:12: error: 'GPIO_PIN_SET' undeclared (first use in this function); did you mean 'GPIO_PIN_11'?
+  162 |         if(GPIO_PIN_SET == value)
+      |            ^~~~~~~~~~~~
+      |            GPIO_PIN_11
+make: *** [phal_driver/Src/subdir.mk:22: phal_driver/Src/phal_gpio_stm32f4x.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+22:02:17 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-gcc "../phal_driver/Src/phal_gpio_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_gpio_stm32f4x.d" -MT"phal_driver/Src/phal_gpio_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_gpio_stm32f4x.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+In file included from D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_gpio_stm32f4x.h:18,
+                 from ../phal_driver/Src/phal_gpio_stm32f4x.c:15:
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_clock_control':
+D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_generic_stm32f4x.h:168:34: error: 'RC' undeclared (first use in this function); did you mean 'RCC'?
+  168 | #define GPIO_PORTA_CLK_EN()     (RC->AHB1ENR |= (1 << 0))
+      |                                  ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c:30:13: note: in expansion of macro 'GPIO_PORTA_CLK_EN'
+   30 |             GPIO_PORTA_CLK_EN();
+      |             ^~~~~~~~~~~~~~~~~
+D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_generic_stm32f4x.h:168:34: note: each undeclared identifier is reported only once for each function it appears in
+  168 | #define GPIO_PORTA_CLK_EN()     (RC->AHB1ENR |= (1 << 0))
+      |                                  ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c:30:13: note: in expansion of macro 'GPIO_PORTA_CLK_EN'
+   30 |             GPIO_PORTA_CLK_EN();
+      |             ^~~~~~~~~~~~~~~~~
+make: *** [phal_driver/Src/subdir.mk:22: phal_driver/Src/phal_gpio_stm32f4x.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+22:02:32 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-gcc "../phal_driver/Src/phal_gpio_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_gpio_stm32f4x.d" -MT"phal_driver/Src/phal_gpio_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_gpio_stm32f4x.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "phal_driver_stm32f4x.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\my_computer\Project_STM32_Driver\02-Project_source\phal_driver_stm32f4x\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="phal_driver_stm32f4x.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: phal_driver_stm32f4x.elf
+ 
+arm-none-eabi-size  phal_driver_stm32f4x.elf 
+arm-none-eabi-objdump -h -S phal_driver_stm32f4x.elf  > "phal_driver_stm32f4x.list"
+   text	   data	    bss	    dec	    hex	filename
+    644	      8	   1568	   2220	    8ac	phal_driver_stm32f4x.elf
+Finished building: default.size.stdout
+ 
+Finished building: phal_driver_stm32f4x.list
+ 

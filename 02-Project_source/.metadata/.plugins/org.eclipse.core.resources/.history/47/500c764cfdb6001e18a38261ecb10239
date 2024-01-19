@@ -165,14 +165,14 @@ typedef struct {
 /** 
  * @brief Clock enable for GPIO peripheral definition
  */
-#define GPIO_PORTA_CLK_EN()     (RCC->AHB1ENR |= (1 << 0))
-#define GPIO_PORTB_CLK_EN()     (RCC->AHB1ENR |= (1 << 1))
-#define GPIO_PORTC_CLK_EN()     (RCC->AHB1ENR |= (1 << 2))
-#define GPIO_PORTD_CLK_EN()     (RCC->AHB1ENR |= (1 << 3))
-#define GPIO_PORTE_CLK_EN()     (RCC->AHB1ENR |= (1 << 4))
-#define GPIO_PORTF_CLK_EN()     (RCC->AHB1ENR |= (1 << 5))
-#define GPIO_PORTG_CLK_EN()     (RCC->AHB1ENR |= (1 << 6))
-#define GPIO_PORTI_CLK_EN()     (RCC->AHB1ENR |= (1 << 7))
+#define GPIO_PORTA_CLK_EN()     (RC->AHB1ENR |= (1 << 0))
+#define GPIO_PORTB_CLK_EN()     (RC->AHB1ENR |= (1 << 1))
+#define GPIO_PORTC_CLK_EN()     (RC->AHB1ENR |= (1 << 2))
+#define GPIO_PORTD_CLK_EN()     (RC->AHB1ENR |= (1 << 3))
+#define GPIO_PORTE_CLK_EN()     (RC->AHB1ENR |= (1 << 4))
+#define GPIO_PORTF_CLK_EN()     (RC->AHB1ENR |= (1 << 5))
+#define GPIO_PORTG_CLK_EN()     (RC->AHB1ENR |= (1 << 6))
+#define GPIO_PORTI_CLK_EN()     (RC->AHB1ENR |= (1 << 7))
 
 /** 
  * @brief Clock enable for I2C peripheral definition

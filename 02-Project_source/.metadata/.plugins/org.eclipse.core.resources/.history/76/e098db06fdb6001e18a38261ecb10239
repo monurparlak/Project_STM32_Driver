@@ -18,45 +18,42 @@
 /**< Function Definitions */
 /*****************************************************************************/
 
-void phal_gpio_clock_control(gpio_reg_def_t *p_gpiox, bool activate)
+void phal_gpio_clock_control(gpio_reg_def_t *p_gpiox, bool activite)
 {
-    if (activate == ENABLE)
+    if(ENABLE == activite)
     {
-        uintptr_t gpio_address = (uintptr_t)p_gpiox;
-
-        switch (gpio_address)
-        {
-        case (uintptr_t)GPIO_PORTA:
+    	switch ((int)p_gpiox)
+    	{
+        case GPIO_PORTA:
             GPIO_PORTA_CLK_EN();
             break;
-        case (uintptr_t)GPIO_PORTB:
+        case GPIO_PORTB:
             GPIO_PORTB_CLK_EN();
             break;
-        case (uintptr_t)GPIO_PORTC:
+        case GPIO_PORTC:
             GPIO_PORTC_CLK_EN();
             break;
-        case (uintptr_t)GPIO_PORTD:
+        case GPIO_PORTD:
             GPIO_PORTD_CLK_EN();
             break;
-        case (uintptr_t)GPIO_PORTE:
+        case GPIO_PORTE:
             GPIO_PORTE_CLK_EN();
             break;
-        case (uintptr_t)GPIO_PORTF:
+        case GPIO_PORTF:
             GPIO_PORTF_CLK_EN();
             break;
-        case (uintptr_t)GPIO_PORTG:
+        case GPIO_PORTG:
             GPIO_PORTG_CLK_EN();
             break;
-        case (uintptr_t)GPIO_PORTI:
+        case GPIO_PORTI:
             GPIO_PORTI_CLK_EN();
             break;
+
         default:
-            // Handle the default case
             break;
-        }
+    	}
     }
 }
-
 
 void phal_gpio_init(gpio_handle_t *p_gpio_handle)
 {
@@ -100,43 +97,36 @@ void phal_gpio_init(gpio_handle_t *p_gpio_handle)
 
 void phal_gpio_deinit(gpio_reg_def_t *p_gpiox)
 {
-    if (p_gpiox == GPIO_PORTA)
-    {
-        GPIO_PORTA_REG_RESET();
-    }
-    else if (p_gpiox == GPIO_PORTB)
-    {
-        GPIO_PORTB_REG_RESET();
-    }
-    else if (p_gpiox == GPIO_PORTC)
-    {
-        GPIO_PORTC_REG_RESET();
-    }
-    else if (p_gpiox == GPIO_PORTD)
-    {
-        GPIO_PORTD_REG_RESET();
-    }
-    else if (p_gpiox == GPIO_PORTE)
-    {
-        GPIO_PORTE_REG_RESET();
-    }
-    else if (p_gpiox == GPIO_PORTF)
-    {
-        GPIO_PORTF_REG_RESET();
-    }
-    else if (p_gpiox == GPIO_PORTG)
-    {
-        GPIO_PORTG_REG_RESET();
-    }
-    else if (p_gpiox == GPIO_PORTI)
-    {
-        GPIO_PORTI_REG_RESET();
-    }
-    // Add more else-if conditions if needed for other GPIO ports
-    else
-    {
-        // Handle the default case
-    }
+	switch (p_gpiox)
+	{
+	case GPIO_PORTA:
+		GPIO_PORTA_REG_RESET();
+		break;
+	case GPIO_PORTB:
+		GPIO_PORTB_REG_RESET();
+		break;
+	case GPIO_PORTC:
+		GPIO_PORTC_REG_RESET();
+		break;
+	case GPIO_PORTD:
+		GPIO_PORTD_REG_RESET();
+		break;
+	case GPIO_PORTE:
+		GPIO_PORTE_REG_RESET();
+		break;
+	case GPIO_PORTF:
+		GPIO_PORTF_REG_RESET();
+		break;
+	case GPIO_PORTG:
+		GPIO_PORTG_REG_RESET();
+		break;
+	case GPIO_PORTI:
+		GPIO_PORTI_REG_RESET();
+		break;
+
+	default:
+		break;
+	}
 }
 
 uint8_t phal_gpio_read_pin(gpio_reg_def_t *p_gpiox, uint8_t pin_no)

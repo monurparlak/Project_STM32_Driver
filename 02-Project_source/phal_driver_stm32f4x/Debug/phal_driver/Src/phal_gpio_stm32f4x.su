@@ -1,0 +1,10 @@
+../phal_driver/Src/phal_gpio_stm32f4x.c:21:6:phal_gpio_clock_control	24	static
+../phal_driver/Src/phal_gpio_stm32f4x.c:61:6:phal_gpio_init	32	static
+../phal_driver/Src/phal_gpio_stm32f4x.c:101:6:phal_gpio_deinit	16	static
+../phal_driver/Src/phal_gpio_stm32f4x.c:142:9:phal_gpio_read_pin	24	static
+../phal_driver/Src/phal_gpio_stm32f4x.c:151:10:phal_gpio_read_port	24	static
+../phal_driver/Src/phal_gpio_stm32f4x.c:160:6:phal_gpio_write_pin	16	static
+../phal_driver/Src/phal_gpio_stm32f4x.c:172:6:phal_gpio_write_port	16	static
+../phal_driver/Src/phal_gpio_stm32f4x.c:177:6:phal_gpio_toggle_pin	16	static
+../phal_driver/Src/phal_gpio_stm32f4x.c:182:6:phal_gpio_irq	16	static
+../phal_driver/Src/phal_gpio_stm32f4x.c:187:6:phal_gpio_irq_handle	16	static

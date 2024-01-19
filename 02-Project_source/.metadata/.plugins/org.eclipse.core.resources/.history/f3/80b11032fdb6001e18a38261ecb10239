@@ -139,6 +139,7 @@ void phal_gpio_deinit(gpio_reg_def_t *p_gpiox)
     }
 }
 
+
 uint8_t phal_gpio_read_pin(gpio_reg_def_t *p_gpiox, uint8_t pin_no)
 {
 	uint8_t data;

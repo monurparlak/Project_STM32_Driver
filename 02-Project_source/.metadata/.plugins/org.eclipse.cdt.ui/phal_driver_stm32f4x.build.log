@@ -1,10 +1,18 @@
-22:59:20 **** Clean-only build of configuration Debug for project phal_driver_stm32f4x ****
-make -j4 clean 
-rm -rf ./phal_driver/Src/phal_generic_stm32f4x.cyclo ./phal_driver/Src/phal_generic_stm32f4x.d ./phal_driver/Src/phal_generic_stm32f4x.o ./phal_driver/Src/phal_generic_stm32f4x.su ./phal_driver/Src/phal_gpio_stm32f4x.cyclo ./phal_driver/Src/phal_gpio_stm32f4x.d ./phal_driver/Src/phal_gpio_stm32f4x.o ./phal_driver/Src/phal_gpio_stm32f4x.su
-rm -rf ./Startup/startup_stm32f407vgtx.d ./Startup/startup_stm32f407vgtx.o
-rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
-rm -rf default.size.stdout phal_driver_stm32f4x.elf phal_driver_stm32f4x.list phal_driver_stm32f4x.map
+22:02:32 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-gcc "../phal_driver/Src/phal_gpio_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_gpio_stm32f4x.d" -MT"phal_driver/Src/phal_gpio_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_gpio_stm32f4x.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "phal_driver_stm32f4x.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\my_computer\Project_STM32_Driver\02-Project_source\phal_driver_stm32f4x\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="phal_driver_stm32f4x.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: phal_driver_stm32f4x.elf
+ 
+arm-none-eabi-size  phal_driver_stm32f4x.elf 
+arm-none-eabi-objdump -h -S phal_driver_stm32f4x.elf  > "phal_driver_stm32f4x.list"
+   text	   data	    bss	    dec	    hex	filename
+    644	      8	   1568	   2220	    8ac	phal_driver_stm32f4x.elf
+Finished building: default.size.stdout
+ 
+Finished building: phal_driver_stm32f4x.list
  
 
-22:59:20 Build Finished. 0 errors, 0 warnings. (took 279ms)
+22:02:34 Build Finished. 0 errors, 0 warnings. (took 1s.729ms)
 
