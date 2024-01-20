@@ -2,5 +2,5 @@
 "./Src/syscalls.o"
 "./Src/sysmem.o"
 "./Startup/startup_stm32f407vgtx.o"
-"./phal_driver/Src/phal_generic_stm32f4x.o"
 "./phal_driver/Src/phal_gpio_stm32f4x.o"
+"./phal_driver/Src/phal_spi_stm32f4x.o"

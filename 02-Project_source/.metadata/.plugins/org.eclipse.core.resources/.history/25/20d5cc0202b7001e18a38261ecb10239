@@ -1,0 +1,215 @@
+/*
+ * phal_spi_stm32f4x.h
+ *
+ *  Created on: Jan 19, 2024
+ *      Author: monurparlak@gmail.com
+ *
+ *  Purpose:
+ *
+ */
+
+#ifndef INC_PHAL_SPI_STM32F4X_H_
+#define INC_PHAL_SPI_STM32F4X_H_
+
+/*****************************************************************************/
+/**< Includes */
+/*****************************************************************************/
+
+#include "phal_generic_stm32f4x.h"
+
+/*****************************************************************************/
+/**< Definitions */
+/*****************************************************************************/
+
+
+
+/*****************************************************************************/
+/**< Typedef Structures */
+/*****************************************************************************/
+
+/**
+ * @brief Configuration structure for individual SPI
+ */
+typedef struct {
+	uint8_t spi_device_mode;
+	uint8_t spi_bus_config;
+	uint8_t spi_sclk_speed;
+	uint8_t spi_dff;
+	uint8_t spi_cpol;
+	uint8_t spi_cpha;
+	uint8_t spi_ssm;
+
+}spi_config_t;
+
+/**
+ * @brief SPI handle structure
+ */
+typedef struct {
+	spi_reg_def_t *p_spix;
+	spi_config_t *spi_config;
+
+}spi_handle_t;
+
+/*****************************************************************************/
+/**< Function Prototypes */
+/*****************************************************************************/
+
+/* Controls the clock for the SPI module.
+ * Activates or deactivates the clock for a specific SPI module.
+ *
+ * @param p_spix:    Pointer to the register structures of the SPI module.
+ *                   (For example: SPI1, SPI2, etc.)
+ *
+ * @param activate:  If true, enables the clock for the SPI module;
+ *                   If false, disables it.
+ *
+ * @return: None
+ *
+ */
+void phal_spi_clock_control(spi_reg_def_t *p_spix, bool activite);
+
+
+/**
+ * @brief Initializes the SPI
+ * Configures the SPI pins based on the provided handle.
+ *
+ * @param p_spi_handle: Pointer to the SPI handle structure containing
+ *                       configuration parameters for SPI initialization.
+ *
+ * @return: None
+ *
+ */
+void phal_spi_init(spi_handle_t *p_spi_handle);
+
+/**
+ * @brief Deinitializes the SPI
+ * Resets the SPI configuration for the specified SPI module.
+ *
+ * @param p_spix: Pointer to the register structures of the SPI module
+ *                 to be deinitialized (e.g., SPIA, SPIB, etc.).
+ *
+ * @return: None
+ *
+ */
+void phal_spi_deinit(spi_reg_def_t *p_spix);
+
+/**
+ * @brief Reads the state of a specific SPI pin
+ * Retrieves and returns the current logical state (high or low) of the
+ * specified SPI pin in the given SPI module.
+ *
+ * @param p_spix: Pointer to the register structures of the SPI module
+ *                 containing the target pin (e.g., SPIA, SPIB, etc.).
+ *
+ * @param pin_no:  The pin number of the SPI module to be read.
+ *
+ * @return: The logical state of the specified SPI pin (1 for high, 0 for low).
+ *
+ */
+uint8_t phal_spi_read_pin(spi_reg_def_t *p_spix, uint8_t pin_no);
+
+/**
+ * @brief Reads the state of all SPI pins in a SPI port
+ * Retrieves and returns the current logical states (high or low) of all
+ * pins in the specified SPI module as a 16-bit value.
+ *
+ * @param p_spix: Pointer to the register structures of the SPI module
+ *                 containing the target port (e.g., SPIA, SPIB, etc.).
+ *
+ * @return: The 16-bit value representing the logical states of all SPI pins
+ *          in the specified SPI port.
+ *
+ */
+uint16_t phal_spi_read_port(spi_reg_def_t *p_spix);
+
+/**
+ * @brief Writes a specific value to a SPI pin
+ * Sets or clears the specified SPI pin in the given SPI module based on
+ * the provided value (1 for high, 0 for low).
+ *
+ * @param p_spix: Pointer to the register structures of the SPI module
+ *                 containing the target pin (e.g., SPIA, SPIB, etc.).
+ *
+ * @param pin_no:  The pin number of the SPI module to be written.
+ *
+ * @param value:   The value to be written to the specified SPI pin
+ *                 (1 for high, 0 for low).
+ *
+ * @return: None
+ *
+ */
+void phal_spi_write_pin(spi_reg_def_t *p_spix, uint8_t pin_no, uint8_t value);
+
+/**
+ * @brief Toggles the state of a specific SPI pin
+ * Inverts the current logical state (high to low or low to high) of
+ * the specified SPI pin in the given SPI module.
+ *
+ * @param p_spix: Pointer to the register structures of the SPI module
+ *                 containing the target pin (e.g., SPIA, SPIB, etc.).
+ *
+ * @param pin_no:  The pin number of the SPI module to be toggled.
+ *
+ * @return: None
+ *
+ */
+void phal_spi_toggle_pin(spi_reg_def_t *p_spix, uint8_t pin_no);
+
+/**
+ * @brief Writes a specific value to all SPI pins in a SPI port
+ * Sets or clears all pins in the specified SPI module based on the provided value
+ * (1 for high, 0 for low).
+ *
+ * @param p_spix: Pointer to the register structures of the SPI module
+ *                 containing the target port (e.g., SPIA, SPIB, etc.).
+ *
+ * @param value:   The value to be written to all SPI pins in the specified port
+ *                 (1 for high, 0 for low).
+ *
+ * @return: None
+ *
+ */
+void phal_spi_write_port(spi_reg_def_t *p_spix, uint8_t value);
+
+/**
+ * @brief Configures SPI interrupt
+ * Configures the specified SPI interrupt with the given parameters.
+ *
+ * @param irq_no:       The IRQ number associated with the SPI interrupt.
+ *
+ * @param irq_priority: The priority level of the SPI interrupt.
+ *
+ * @param activite:     The trigger edge of the SPI interrupt (rising, falling, or both).
+ *
+ * @return: None
+ *
+ */
+void phal_spi_irq(uint8_t irq_no, uint8_t irq_priority, uint8_t activite);
+
+/**
+ * @brief Handles SPI interrupt
+ * Handles the SPI interrupt associated with the specified pin.
+ *
+ * @param pin_no: The pin number of the SPI module associated with the interrupt.
+ *
+ * @return: None
+ *
+ */
+void phal_spi_irq_handle(uint8_t pin_no);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif /* INC_PHAL_SPI_STM32F4X_H_ */

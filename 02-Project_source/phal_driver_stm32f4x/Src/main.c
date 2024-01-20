@@ -19,6 +19,8 @@
 #include <stdint.h>
 
 #include "phal_generic_stm32f4x.h"
+#include "phal_gpio_stm32f4x.h"
+#include "phal_spi_stm32f4x.h"
 
 int main(void)
 {

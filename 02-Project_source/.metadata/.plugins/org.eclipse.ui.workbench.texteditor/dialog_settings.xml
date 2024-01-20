@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="/*"/>
+		<item key="selection" value="SPI"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
-		<item key="wholeword" value="true"/>
+		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="GPIO"/>
+			<item value="gpio"/>
+			<item value="SPI1_PCLK_EN"/>
+			<item value="typedef struct"/>
+			<item value="GPIO_PIN_SET"/>
 			<item value="/*"/>
 			<item value="SPI1_ADDR"/>
 		</list>
 		<list key="replacehistory">
+			<item value="SPI"/>
+			<item value="spi"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

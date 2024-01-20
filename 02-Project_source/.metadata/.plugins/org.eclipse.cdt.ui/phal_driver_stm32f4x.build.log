@@ -1,7 +1,6 @@
-22:02:32 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+23:17:36 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
 make -j4 all 
 arm-none-eabi-gcc "../phal_driver/Src/phal_gpio_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_gpio_stm32f4x.d" -MT"phal_driver/Src/phal_gpio_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_gpio_stm32f4x.o"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 arm-none-eabi-gcc -o "phal_driver_stm32f4x.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\my_computer\Project_STM32_Driver\02-Project_source\phal_driver_stm32f4x\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="phal_driver_stm32f4x.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: phal_driver_stm32f4x.elf
  
@@ -14,5 +13,5 @@ Finished building: default.size.stdout
 Finished building: phal_driver_stm32f4x.list
  
 
-22:02:34 Build Finished. 0 errors, 0 warnings. (took 1s.729ms)
+23:17:37 Build Finished. 0 errors, 0 warnings. (took 877ms)
 

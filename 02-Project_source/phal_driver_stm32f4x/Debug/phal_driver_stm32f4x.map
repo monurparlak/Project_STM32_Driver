@@ -90,6 +90,8 @@ Discarded input sections
  .group         0x0000000000000000        0xc ./Src/main.o
  .group         0x0000000000000000        0xc ./Src/main.o
  .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
  .text          0x0000000000000000        0x0 ./Src/main.o
  .data          0x0000000000000000        0x0 ./Src/main.o
  .bss           0x0000000000000000        0x0 ./Src/main.o
@@ -294,21 +296,6 @@ Discarded input sections
  .text          0x0000000000000000       0x14 ./Startup/startup_stm32f407vgtx.o
  .data          0x0000000000000000        0x0 ./Startup/startup_stm32f407vgtx.o
  .bss           0x0000000000000000        0x0 ./Startup/startup_stm32f407vgtx.o
- .group         0x0000000000000000        0xc ./phal_driver/Src/phal_generic_stm32f4x.o
- .text          0x0000000000000000        0x0 ./phal_driver/Src/phal_generic_stm32f4x.o
- .data          0x0000000000000000        0x0 ./phal_driver/Src/phal_generic_stm32f4x.o
- .bss           0x0000000000000000        0x0 ./phal_driver/Src/phal_generic_stm32f4x.o
- .debug_info    0x0000000000000000       0x22 ./phal_driver/Src/phal_generic_stm32f4x.o
- .debug_abbrev  0x0000000000000000       0x12 ./phal_driver/Src/phal_generic_stm32f4x.o
- .debug_aranges
-                0x0000000000000000       0x18 ./phal_driver/Src/phal_generic_stm32f4x.o
- .debug_macro   0x0000000000000000       0x11 ./phal_driver/Src/phal_generic_stm32f4x.o
- .debug_macro   0x0000000000000000      0xaae ./phal_driver/Src/phal_generic_stm32f4x.o
- .debug_line    0x0000000000000000       0x4b ./phal_driver/Src/phal_generic_stm32f4x.o
- .debug_str     0x0000000000000000     0x2df1 ./phal_driver/Src/phal_generic_stm32f4x.o
- .comment       0x0000000000000000       0x44 ./phal_driver/Src/phal_generic_stm32f4x.o
- .ARM.attributes
-                0x0000000000000000       0x34 ./phal_driver/Src/phal_generic_stm32f4x.o
  .group         0x0000000000000000        0xc ./phal_driver/Src/phal_gpio_stm32f4x.o
  .group         0x0000000000000000        0xc ./phal_driver/Src/phal_gpio_stm32f4x.o
  .group         0x0000000000000000        0xc ./phal_driver/Src/phal_gpio_stm32f4x.o
@@ -362,8 +349,8 @@ Discarded input sections
                 0x0000000000000000       0x1e ./phal_driver/Src/phal_gpio_stm32f4x.o
  .text.phal_gpio_irq_handle
                 0x0000000000000000       0x16 ./phal_driver/Src/phal_gpio_stm32f4x.o
- .debug_info    0x0000000000000000      0x5fa ./phal_driver/Src/phal_gpio_stm32f4x.o
- .debug_abbrev  0x0000000000000000       0xfb ./phal_driver/Src/phal_gpio_stm32f4x.o
+ .debug_info    0x0000000000000000      0x602 ./phal_driver/Src/phal_gpio_stm32f4x.o
+ .debug_abbrev  0x0000000000000000       0xf9 ./phal_driver/Src/phal_gpio_stm32f4x.o
  .debug_aranges
                 0x0000000000000000       0x68 ./phal_driver/Src/phal_gpio_stm32f4x.o
  .debug_rnglists
@@ -397,14 +384,106 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 ./phal_driver/Src/phal_gpio_stm32f4x.o
  .debug_macro   0x0000000000000000      0x147 ./phal_driver/Src/phal_gpio_stm32f4x.o
  .debug_macro   0x0000000000000000       0x22 ./phal_driver/Src/phal_gpio_stm32f4x.o
- .debug_macro   0x0000000000000000      0x299 ./phal_driver/Src/phal_gpio_stm32f4x.o
- .debug_macro   0x0000000000000000       0xbe ./phal_driver/Src/phal_gpio_stm32f4x.o
+ .debug_macro   0x0000000000000000      0x2cc ./phal_driver/Src/phal_gpio_stm32f4x.o
+ .debug_macro   0x0000000000000000       0xca ./phal_driver/Src/phal_gpio_stm32f4x.o
  .debug_line    0x0000000000000000      0x846 ./phal_driver/Src/phal_gpio_stm32f4x.o
- .debug_str     0x0000000000000000     0x8fe9 ./phal_driver/Src/phal_gpio_stm32f4x.o
+ .debug_str     0x0000000000000000     0x93d0 ./phal_driver/Src/phal_gpio_stm32f4x.o
  .comment       0x0000000000000000       0x44 ./phal_driver/Src/phal_gpio_stm32f4x.o
  .debug_frame   0x0000000000000000      0x1a0 ./phal_driver/Src/phal_gpio_stm32f4x.o
  .ARM.attributes
                 0x0000000000000000       0x34 ./phal_driver/Src/phal_gpio_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .group         0x0000000000000000        0xc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .text          0x0000000000000000        0x0 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .data          0x0000000000000000        0x0 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .bss           0x0000000000000000        0x0 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .text.phal_spi_clock_control
+                0x0000000000000000       0x18 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .text.phal_spi_init
+                0x0000000000000000       0x14 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .text.phal_spi_deinit
+                0x0000000000000000       0x14 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .text.phal_spi_send_data
+                0x0000000000000000       0x18 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .text.phal_spi_receive
+                0x0000000000000000       0x18 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .text.phal_spi_irq_interrupt
+                0x0000000000000000       0x1c ./phal_driver/Src/phal_spi_stm32f4x.o
+ .text.phal_spi_irq_priority
+                0x0000000000000000       0x18 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .text.phal_spi_irq_handle
+                0x0000000000000000       0x16 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_info    0x0000000000000000      0x365 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_abbrev  0x0000000000000000       0xae ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_aranges
+                0x0000000000000000       0x58 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_rnglists
+                0x0000000000000000       0x3d ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000      0x167 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000      0xaae ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x22 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x8e ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x51 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000      0x103 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x6a ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000      0x1df ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x61 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x2a ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x43 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x34 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x16 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x97 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000      0x369 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0xfd ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x10 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x16 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x43 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x34 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x10 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x58 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x8e ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x1c ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000      0x177 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x16 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x16 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000      0x147 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x22 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000      0x2cc ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_macro   0x0000000000000000       0x10 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_line    0x0000000000000000      0x697 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_str     0x0000000000000000     0x9037 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .comment       0x0000000000000000       0x44 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .debug_frame   0x0000000000000000      0x150 ./phal_driver/Src/phal_spi_stm32f4x.o
+ .ARM.attributes
+                0x0000000000000000       0x34 ./phal_driver/Src/phal_spi_stm32f4x.o
  .text          0x0000000000000000        0x0 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-exit.o)
  .data          0x0000000000000000        0x0 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-exit.o)
  .bss           0x0000000000000000        0x0 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-exit.o)
@@ -651,8 +730,8 @@ LOAD ./Src/main.o
 LOAD ./Src/syscalls.o
 LOAD ./Src/sysmem.o
 LOAD ./Startup/startup_stm32f407vgtx.o
-LOAD ./phal_driver/Src/phal_generic_stm32f4x.o
 LOAD ./phal_driver/Src/phal_gpio_stm32f4x.o
+LOAD ./phal_driver/Src/phal_spi_stm32f4x.o
 START GROUP
 LOAD C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a
 LOAD C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
@@ -963,46 +1042,48 @@ LOAD C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_rnglists
                 0x0000000000000013       0x19 ./Startup/startup_stm32f407vgtx.o
 
-.debug_macro    0x0000000000000000     0x1dbc
- .debug_macro   0x0000000000000000      0x158 ./Src/main.o
- .debug_macro   0x0000000000000158      0xaae ./Src/main.o
- .debug_macro   0x0000000000000c06       0x22 ./Src/main.o
- .debug_macro   0x0000000000000c28       0x8e ./Src/main.o
- .debug_macro   0x0000000000000cb6       0x51 ./Src/main.o
- .debug_macro   0x0000000000000d07      0x103 ./Src/main.o
- .debug_macro   0x0000000000000e0a       0x6a ./Src/main.o
- .debug_macro   0x0000000000000e74      0x1df ./Src/main.o
- .debug_macro   0x0000000000001053       0x61 ./Src/main.o
- .debug_macro   0x00000000000010b4       0x2a ./Src/main.o
- .debug_macro   0x00000000000010de       0x43 ./Src/main.o
- .debug_macro   0x0000000000001121       0x34 ./Src/main.o
- .debug_macro   0x0000000000001155       0x16 ./Src/main.o
- .debug_macro   0x000000000000116b       0x97 ./Src/main.o
- .debug_macro   0x0000000000001202      0x369 ./Src/main.o
- .debug_macro   0x000000000000156b       0xfd ./Src/main.o
- .debug_macro   0x0000000000001668       0x10 ./Src/main.o
- .debug_macro   0x0000000000001678       0x16 ./Src/main.o
- .debug_macro   0x000000000000168e       0x43 ./Src/main.o
- .debug_macro   0x00000000000016d1       0x34 ./Src/main.o
- .debug_macro   0x0000000000001705       0x10 ./Src/main.o
- .debug_macro   0x0000000000001715       0x58 ./Src/main.o
- .debug_macro   0x000000000000176d       0x8e ./Src/main.o
- .debug_macro   0x00000000000017fb       0x1c ./Src/main.o
- .debug_macro   0x0000000000001817      0x177 ./Src/main.o
- .debug_macro   0x000000000000198e       0x16 ./Src/main.o
- .debug_macro   0x00000000000019a4       0x16 ./Src/main.o
- .debug_macro   0x00000000000019ba      0x147 ./Src/main.o
- .debug_macro   0x0000000000001b01       0x22 ./Src/main.o
- .debug_macro   0x0000000000001b23      0x299 ./Src/main.o
+.debug_macro    0x0000000000000000     0x1eeb
+ .debug_macro   0x0000000000000000      0x174 ./Src/main.o
+ .debug_macro   0x0000000000000174      0xaae ./Src/main.o
+ .debug_macro   0x0000000000000c22       0x22 ./Src/main.o
+ .debug_macro   0x0000000000000c44       0x8e ./Src/main.o
+ .debug_macro   0x0000000000000cd2       0x51 ./Src/main.o
+ .debug_macro   0x0000000000000d23      0x103 ./Src/main.o
+ .debug_macro   0x0000000000000e26       0x6a ./Src/main.o
+ .debug_macro   0x0000000000000e90      0x1df ./Src/main.o
+ .debug_macro   0x000000000000106f       0x61 ./Src/main.o
+ .debug_macro   0x00000000000010d0       0x2a ./Src/main.o
+ .debug_macro   0x00000000000010fa       0x43 ./Src/main.o
+ .debug_macro   0x000000000000113d       0x34 ./Src/main.o
+ .debug_macro   0x0000000000001171       0x16 ./Src/main.o
+ .debug_macro   0x0000000000001187       0x97 ./Src/main.o
+ .debug_macro   0x000000000000121e      0x369 ./Src/main.o
+ .debug_macro   0x0000000000001587       0xfd ./Src/main.o
+ .debug_macro   0x0000000000001684       0x10 ./Src/main.o
+ .debug_macro   0x0000000000001694       0x16 ./Src/main.o
+ .debug_macro   0x00000000000016aa       0x43 ./Src/main.o
+ .debug_macro   0x00000000000016ed       0x34 ./Src/main.o
+ .debug_macro   0x0000000000001721       0x10 ./Src/main.o
+ .debug_macro   0x0000000000001731       0x58 ./Src/main.o
+ .debug_macro   0x0000000000001789       0x8e ./Src/main.o
+ .debug_macro   0x0000000000001817       0x1c ./Src/main.o
+ .debug_macro   0x0000000000001833      0x177 ./Src/main.o
+ .debug_macro   0x00000000000019aa       0x16 ./Src/main.o
+ .debug_macro   0x00000000000019c0       0x16 ./Src/main.o
+ .debug_macro   0x00000000000019d6      0x147 ./Src/main.o
+ .debug_macro   0x0000000000001b1d       0x22 ./Src/main.o
+ .debug_macro   0x0000000000001b3f      0x2cc ./Src/main.o
+ .debug_macro   0x0000000000001e0b       0xca ./Src/main.o
+ .debug_macro   0x0000000000001ed5       0x16 ./Src/main.o
 
-.debug_line     0x0000000000000000      0x66a
- .debug_line    0x0000000000000000      0x5ef ./Src/main.o
- .debug_line    0x00000000000005ef       0x7b ./Startup/startup_stm32f407vgtx.o
+.debug_line     0x0000000000000000      0x699
+ .debug_line    0x0000000000000000      0x61e ./Src/main.o
+ .debug_line    0x000000000000061e       0x7b ./Startup/startup_stm32f407vgtx.o
 
-.debug_str      0x0000000000000000     0x88bb
- .debug_str     0x0000000000000000     0x888c ./Src/main.o
-                                       0x8a6e (size before relaxing)
- .debug_str     0x000000000000888c       0x2f ./Startup/startup_stm32f407vgtx.o
+.debug_str      0x0000000000000000     0x8eb2
+ .debug_str     0x0000000000000000     0x8e83 ./Src/main.o
+                                       0x9065 (size before relaxing)
+ .debug_str     0x0000000000008e83       0x2f ./Startup/startup_stm32f407vgtx.o
                                          0x80 (size before relaxing)
 
 .debug_frame    0x0000000000000000       0x54

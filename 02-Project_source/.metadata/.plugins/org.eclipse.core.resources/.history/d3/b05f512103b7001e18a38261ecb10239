@@ -1,0 +1,147 @@
+/*
+ * phal_spi_stm32f4x.h
+ *
+ *  Created on: Jan 19, 2024
+ *      Author: monurparlak@gmail.com
+ *
+ *  Purpose:
+ *
+ */
+
+#ifndef INC_PHAL_SPI_STM32F4X_H_
+#define INC_PHAL_SPI_STM32F4X_H_
+
+/*****************************************************************************/
+/**< Includes */
+/*****************************************************************************/
+
+#include "phal_generic_stm32f4x.h"
+
+/*****************************************************************************/
+/**< Definitions */
+/*****************************************************************************/
+
+
+
+/*****************************************************************************/
+/**< Typedef Structures */
+/*****************************************************************************/
+
+/**
+ * @brief Configuration structure for individual SPI
+ */
+typedef struct {
+	uint8_t spi_device_mode;
+	uint8_t spi_bus_config;
+	uint8_t spi_sclk_speed;
+	uint8_t spi_dff;
+	uint8_t spi_cpol;
+	uint8_t spi_cpha;
+	uint8_t spi_ssm;
+
+}spi_config_t;
+
+/**
+ * @brief SPI handle structure
+ */
+typedef struct {
+	spi_reg_def_t *p_spix;
+	spi_config_t *spi_config;
+
+}spi_handle_t;
+
+/*****************************************************************************/
+/**< Function Prototypes */
+/*****************************************************************************/
+
+/**
+ * @brief Controls the clock for the SPI module.
+ * Activates or deactivates the clock for a specific SPI module.
+ *
+ * @param p_spix:    Pointer to the register structures of the SPI module.
+ *                   (For example: SPI1, SPI2, etc.)
+ *
+ * @param activate:  If true, enables the clock for the SPI module;
+ *                   If false, disables it.
+ *
+ * @return: None
+ *
+ */
+void phal_spi_clock_control(spi_reg_def_t *p_spix, bool activite);
+
+/**
+ * @brief Initializes the SPI module for STM32F4 board.
+ * Configures the SPI module based on the provided handle.
+ *
+ * @param p_spi_handle: Pointer to the SPI handle structure containing
+ *                      configuration parameters for SPI initialization.
+ *
+ * @return: None
+ *
+ */
+void phal_spi_init(spi_handle_t *p_spi_handle);
+
+/**
+ * @brief Deinitializes the SPI module
+ * Resets the configuration of the specified SPI module.
+ *
+ * @param p_spix: Pointer to the register structures of the SPI module
+ *                to be deinitialized (e.g., SPI1, SPI2, etc.).
+ *
+ * @return: None
+ *
+ */
+void phal_spi_deinit(spi_reg_def_t *p_spix);
+
+/**
+ * @brief Sends data over SPI for STM32F4 board.
+ * Transmits data from the provided buffer over the specified SPI module.
+ *
+ * @param p_spix:      Pointer to the register structures of the SPI module.
+ *                    (For example: SPI1, SPI2, etc.)
+ *
+ * @param p_tx_buffer: Pointer to the transmit data buffer.
+ *
+ * @param len:         Length of the data to be transmitted.
+ *
+ * @return: None
+ *
+ */
+void phal_spi_send_data(spi_reg_def_t *p_spix, uint8_t *p_tx_buffer, uint32_t len);
+
+
+void phal_spi_receive(spi_reg_def_t *p_spix, uint8_t *p_rx_buffer, uint32_t len);
+
+
+void phal_spi_irq_interrupt(uint8_t irq_no, uint8_t activite);
+
+
+void phal_spi_irq_priority(uint8_t irq_no, uint32_t irq_priority);
+
+/**
+ * @brief Handles SPI interrupt
+ * Handles the SPI interrupt associated with the specified pin.
+ *
+ * @param pin_no: The pin number of the GPIO module associated with the SPI interrupt.
+ *
+ * @return: None
+ *
+ */
+void phal_spi_irq_handle(uint8_t pin_no);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif /* INC_PHAL_SPI_STM32F4X_H_ */

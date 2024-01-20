@@ -417,3 +417,228 @@ Finished building: default.size.stdout
  
 Finished building: phal_driver_stm32f4x.list
  
+22:05:27 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-gcc "../phal_driver/Src/phal_gpio_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_gpio_stm32f4x.d" -MT"phal_driver/Src/phal_gpio_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_gpio_stm32f4x.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "phal_driver_stm32f4x.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\my_computer\Project_STM32_Driver\02-Project_source\phal_driver_stm32f4x\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="phal_driver_stm32f4x.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: phal_driver_stm32f4x.elf
+ 
+arm-none-eabi-size  phal_driver_stm32f4x.elf 
+arm-none-eabi-objdump -h -S phal_driver_stm32f4x.elf  > "phal_driver_stm32f4x.list"
+   text	   data	    bss	    dec	    hex	filename
+    644	      8	   1568	   2220	    8ac	phal_driver_stm32f4x.elf
+Finished building: default.size.stdout
+ 
+Finished building: phal_driver_stm32f4x.list
+ 
+22:06:36 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-gcc "../phal_driver/Src/phal_gpio_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_gpio_stm32f4x.d" -MT"phal_driver/Src/phal_gpio_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_gpio_stm32f4x.o"
+arm-none-eabi-gcc "../phal_driver/Src/phal_spi_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_spi_stm32f4x.d" -MT"phal_driver/Src/phal_spi_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_spi_stm32f4x.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "phal_driver_stm32f4x.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\my_computer\Project_STM32_Driver\02-Project_source\phal_driver_stm32f4x\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="phal_driver_stm32f4x.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: phal_driver_stm32f4x.elf
+ 
+arm-none-eabi-size  phal_driver_stm32f4x.elf 
+arm-none-eabi-objdump -h -S phal_driver_stm32f4x.elf  > "phal_driver_stm32f4x.list"
+   text	   data	    bss	    dec	    hex	filename
+    644	      8	   1568	   2220	    8ac	phal_driver_stm32f4x.elf
+Finished building: default.size.stdout
+ 
+Finished building: phal_driver_stm32f4x.list
+ 
+22:33:37 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-gcc "../phal_driver/Src/phal_gpio_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_gpio_stm32f4x.d" -MT"phal_driver/Src/phal_gpio_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_gpio_stm32f4x.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "phal_driver_stm32f4x.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\my_computer\Project_STM32_Driver\02-Project_source\phal_driver_stm32f4x\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="phal_driver_stm32f4x.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: phal_driver_stm32f4x.elf
+ 
+arm-none-eabi-size  phal_driver_stm32f4x.elf 
+arm-none-eabi-objdump -h -S phal_driver_stm32f4x.elf  > "phal_driver_stm32f4x.list"
+   text	   data	    bss	    dec	    hex	filename
+    644	      8	   1568	   2220	    8ac	phal_driver_stm32f4x.elf
+Finished building: default.size.stdout
+ 
+Finished building: phal_driver_stm32f4x.list
+ 
+22:33:49 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:23:
+D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc/phal_spi_stm32f4x.h:70:28: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'l'
+   70 | void phal_spi_clock_contro l(spi_reg_def_t *p_spix, bool activite);
+      |                            ^
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+22:34:45 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "phal_driver_stm32f4x.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\my_computer\Project_STM32_Driver\02-Project_source\phal_driver_stm32f4x\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="phal_driver_stm32f4x.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: phal_driver_stm32f4x.elf
+ 
+arm-none-eabi-size  phal_driver_stm32f4x.elf 
+arm-none-eabi-objdump -h -S phal_driver_stm32f4x.elf  > "phal_driver_stm32f4x.list"
+   text	   data	    bss	    dec	    hex	filename
+    644	      8	   1568	   2220	    8ac	phal_driver_stm32f4x.elf
+Finished building: default.size.stdout
+ 
+Finished building: phal_driver_stm32f4x.list
+ 
+22:44:18 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "phal_driver_stm32f4x.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\my_computer\Project_STM32_Driver\02-Project_source\phal_driver_stm32f4x\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="phal_driver_stm32f4x.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: phal_driver_stm32f4x.elf
+ 
+arm-none-eabi-size  phal_driver_stm32f4x.elf 
+arm-none-eabi-objdump -h -S phal_driver_stm32f4x.elf  > "phal_driver_stm32f4x.list"
+   text	   data	    bss	    dec	    hex	filename
+    644	      8	   1568	   2220	    8ac	phal_driver_stm32f4x.elf
+Finished building: default.size.stdout
+ 
+Finished building: phal_driver_stm32f4x.list
+ 
+23:10:04 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-gcc "../phal_driver/Src/phal_gpio_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_gpio_stm32f4x.d" -MT"phal_driver/Src/phal_gpio_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_gpio_stm32f4x.o"
+arm-none-eabi-gcc "../phal_driver/Src/phal_spi_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_spi_stm32f4x.d" -MT"phal_driver/Src/phal_spi_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_spi_stm32f4x.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "phal_driver_stm32f4x.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\my_computer\Project_STM32_Driver\02-Project_source\phal_driver_stm32f4x\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="phal_driver_stm32f4x.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: phal_driver_stm32f4x.elf
+ 
+arm-none-eabi-size  phal_driver_stm32f4x.elf 
+arm-none-eabi-objdump -h -S phal_driver_stm32f4x.elf  > "phal_driver_stm32f4x.list"
+   text	   data	    bss	    dec	    hex	filename
+    644	      8	   1568	   2220	    8ac	phal_driver_stm32f4x.elf
+Finished building: default.size.stdout
+ 
+Finished building: phal_driver_stm32f4x.list
+ 
+23:17:11 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-gcc "../phal_driver/Src/phal_gpio_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_gpio_stm32f4x.d" -MT"phal_driver/Src/phal_gpio_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_gpio_stm32f4x.o"
+arm-none-eabi-gcc "../phal_driver/Src/phal_spi_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_spi_stm32f4x.d" -MT"phal_driver/Src/phal_spi_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_spi_stm32f4x.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_init':
+../phal_driver/Src/phal_gpio_stm32f4x.c:69:36: error: 'gpio_reg_def_t' has no member named 'MODER'
+   69 |         p_gpio_handle->p_gpio_portx->MODER |= temp;
+      |                                    ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c:78:32: error: 'gpio_reg_def_t' has no member named 'OSPEEDR'
+   78 |     p_gpio_handle->p_gpio_portx->OSPEEDR |= temp;
+      |                                ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c:83:32: error: 'gpio_reg_def_t' has no member named 'PUPDR'
+   83 |     p_gpio_handle->p_gpio_portx->PUPDR |= temp;
+      |                                ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c:97:36: error: 'gpio_reg_def_t' has no member named 'AFR'
+   97 |         p_gpio_handle->p_gpio_portx->AFR[af_register] |= temp;
+      |                                    ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c:93:18: warning: variable 'af_register' set but not used [-Wunused-but-set-variable]
+   93 |         uint32_t af_register = p_gpio_handle->gpio_pin_config.gpio_pin_no / 8;
+      |                  ^~~~~~~~~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_read_pin':
+../phal_driver/Src/phal_gpio_stm32f4x.c:146:34: error: 'gpio_reg_def_t' has no member named 'IDR'
+  146 |         data = (uint8_t)((p_gpiox->IDR >> pin_no) & 0x00000001);
+      |                                  ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_read_port':
+../phal_driver/Src/phal_gpio_stm32f4x.c:155:34: error: 'gpio_reg_def_t' has no member named 'IDR'
+  155 |         data = (uint16_t)(p_gpiox->IDR);
+      |                                  ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_write_pin':
+../phal_driver/Src/phal_gpio_stm32f4x.c:164:24: error: 'gpio_reg_def_t' has no member named 'ODR'
+  164 |                 p_gpiox->ODR |= (1 << pin_no);
+      |                        ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c:168:24: error: 'gpio_reg_def_t' has no member named 'ODR'
+  168 |                 p_gpiox->ODR &= ~(1 << pin_no);
+      |                        ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_write_port':
+../phal_driver/Src/phal_gpio_stm32f4x.c:174:16: error: 'gpio_reg_def_t' has no member named 'ODR'
+  174 |         p_gpiox->ODR = value;
+      |                ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_toggle_pin':
+../phal_driver/Src/phal_gpio_stm32f4x.c:179:16: error: 'gpio_reg_def_t' has no member named 'ODR'
+  179 |         p_gpiox->ODR ^= (1 << pin_no);
+      |                ^~
+make: *** [phal_driver/Src/subdir.mk:22: phal_driver/Src/phal_gpio_stm32f4x.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+23:17:14 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-gcc "../phal_driver/Src/phal_gpio_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_gpio_stm32f4x.d" -MT"phal_driver/Src/phal_gpio_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_gpio_stm32f4x.o"
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_init':
+../phal_driver/Src/phal_gpio_stm32f4x.c:69:36: error: 'gpio_reg_def_t' has no member named 'MODER'
+   69 |         p_gpio_handle->p_gpio_portx->MODER |= temp;
+      |                                    ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c:78:32: error: 'gpio_reg_def_t' has no member named 'OSPEEDR'
+   78 |     p_gpio_handle->p_gpio_portx->OSPEEDR |= temp;
+      |                                ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c:83:32: error: 'gpio_reg_def_t' has no member named 'PUPDR'
+   83 |     p_gpio_handle->p_gpio_portx->PUPDR |= temp;
+      |                                ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c:97:36: error: 'gpio_reg_def_t' has no member named 'AFR'
+   97 |         p_gpio_handle->p_gpio_portx->AFR[af_register] |= temp;
+      |                                    ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c:93:18: warning: variable 'af_register' set but not used [-Wunused-but-set-variable]
+   93 |         uint32_t af_register = p_gpio_handle->gpio_pin_config.gpio_pin_no / 8;
+      |                  ^~~~~~~~~~~
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_read_pin':
+../phal_driver/Src/phal_gpio_stm32f4x.c:146:34: error: 'gpio_reg_def_t' has no member named 'IDR'
+  146 |         data = (uint8_t)((p_gpiox->IDR >> pin_no) & 0x00000001);
+      |                                  ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_read_port':
+../phal_driver/Src/phal_gpio_stm32f4x.c:155:34: error: 'gpio_reg_def_t' has no member named 'IDR'
+  155 |         data = (uint16_t)(p_gpiox->IDR);
+      |                                  ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_write_pin':
+../phal_driver/Src/phal_gpio_stm32f4x.c:164:24: error: 'gpio_reg_def_t' has no member named 'ODR'
+  164 |                 p_gpiox->ODR |= (1 << pin_no);
+      |                        ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c:168:24: error: 'gpio_reg_def_t' has no member named 'ODR'
+  168 |                 p_gpiox->ODR &= ~(1 << pin_no);
+      |                        ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_write_port':
+../phal_driver/Src/phal_gpio_stm32f4x.c:174:16: error: 'gpio_reg_def_t' has no member named 'ODR'
+  174 |         p_gpiox->ODR = value;
+      |                ^~
+../phal_driver/Src/phal_gpio_stm32f4x.c: In function 'phal_gpio_toggle_pin':
+../phal_driver/Src/phal_gpio_stm32f4x.c:179:16: error: 'gpio_reg_def_t' has no member named 'ODR'
+  179 |         p_gpiox->ODR ^= (1 << pin_no);
+      |                ^~
+make: *** [phal_driver/Src/subdir.mk:22: phal_driver/Src/phal_gpio_stm32f4x.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+23:17:27 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-gcc "../phal_driver/Src/phal_gpio_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_gpio_stm32f4x.d" -MT"phal_driver/Src/phal_gpio_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_gpio_stm32f4x.o"
+arm-none-eabi-gcc -o "phal_driver_stm32f4x.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\my_computer\Project_STM32_Driver\02-Project_source\phal_driver_stm32f4x\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="phal_driver_stm32f4x.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: phal_driver_stm32f4x.elf
+ 
+arm-none-eabi-size  phal_driver_stm32f4x.elf 
+arm-none-eabi-objdump -h -S phal_driver_stm32f4x.elf  > "phal_driver_stm32f4x.list"
+   text	   data	    bss	    dec	    hex	filename
+    644	      8	   1568	   2220	    8ac	phal_driver_stm32f4x.elf
+Finished building: default.size.stdout
+ 
+Finished building: phal_driver_stm32f4x.list
+ 
+23:17:32 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-size  phal_driver_stm32f4x.elf 
+   text	   data	    bss	    dec	    hex	filename
+    644	      8	   1568	   2220	    8ac	phal_driver_stm32f4x.elf
+Finished building: default.size.stdout
+ 
+23:17:36 **** Incremental Build of configuration Debug for project phal_driver_stm32f4x ****
+make -j4 all 
+arm-none-eabi-gcc "../phal_driver/Src/phal_gpio_stm32f4x.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/my_computer/Project_STM32_Driver/02-Project_source/phal_driver_stm32f4x/phal_driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"phal_driver/Src/phal_gpio_stm32f4x.d" -MT"phal_driver/Src/phal_gpio_stm32f4x.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "phal_driver/Src/phal_gpio_stm32f4x.o"
+arm-none-eabi-gcc -o "phal_driver_stm32f4x.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\my_computer\Project_STM32_Driver\02-Project_source\phal_driver_stm32f4x\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="phal_driver_stm32f4x.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: phal_driver_stm32f4x.elf
+ 
+arm-none-eabi-size  phal_driver_stm32f4x.elf 
+arm-none-eabi-objdump -h -S phal_driver_stm32f4x.elf  > "phal_driver_stm32f4x.list"
+   text	   data	    bss	    dec	    hex	filename
+    644	      8	   1568	   2220	    8ac	phal_driver_stm32f4x.elf
+Finished building: default.size.stdout
+ 
+Finished building: phal_driver_stm32f4x.list
+ 

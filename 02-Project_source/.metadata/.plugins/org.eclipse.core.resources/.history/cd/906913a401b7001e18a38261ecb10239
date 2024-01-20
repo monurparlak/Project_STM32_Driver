@@ -1,0 +1,215 @@
+/*
+ * phal_spi_stm32f4x.h
+ *
+ *  Created on: Jan 19, 2024
+ *      Author: monurparlak@gmail.com
+ *
+ *  Purpose:
+ *
+ */
+
+#ifndef INC_PHAL_SPI_STM32F4X_H_
+#define INC_PHAL_SPI_STM32F4X_H_
+
+/*****************************************************************************/
+/**< Includes */
+/*****************************************************************************/
+
+#include "phal_generic_stm32f4x.h"
+
+/*****************************************************************************/
+/**< Definitions */
+/*****************************************************************************/
+
+
+
+/*****************************************************************************/
+/**< Typedef Structures */
+/*****************************************************************************/
+
+/**
+ * @brief Configuration structure for individual SPI
+ */
+typedef struct {
+	uint8_t spi_device_mode;
+	uint8_t spi_bus_config;
+	uint8_t spi_sclk_speed;
+	uint8_t spi_dff;
+	uint8_t spi_cpol;
+	uint8_t spi_cpha;
+	uint8_t spi_ssm;
+
+}spi_config_t;
+
+/**
+ * @brief SPI handle structure
+ */
+typedef struct {
+	spi_reg_def_t *p_spix;
+	spi_config_t *spi_config;
+
+}spi_handle_t;
+
+/*****************************************************************************/
+/**< Function Prototypes */
+/*****************************************************************************/
+
+/**
+ * @brief Controls GPIO clock
+ * Activates or deactivates clock for a specific GPIO module.
+ *
+ * @param p_gpiox: Pointer to the register structures of the GPIO module.
+ *                (For example: GPIOA, GPIOB, etc.)
+ *
+ * @param activate: If true, enables the clock for the GPIO module;
+ *                  If false, disables it.
+ *
+ * @return: None
+ *
+ */
+void phal_gpio_clock_control(gpio_reg_def_t *p_gpiox, bool activite);
+
+/**
+ * @brief Initializes the GPIO
+ * Configures the GPIO pins based on the provided handle.
+ *
+ * @param p_gpio_handle: Pointer to the GPIO handle structure containing
+ *                       configuration parameters for GPIO initialization.
+ *
+ * @return: None
+ *
+ */
+void phal_gpio_init(gpio_handle_t *p_gpio_handle);
+
+/**
+ * @brief Deinitializes the GPIO
+ * Resets the GPIO configuration for the specified GPIO module.
+ *
+ * @param p_gpiox: Pointer to the register structures of the GPIO module
+ *                 to be deinitialized (e.g., GPIOA, GPIOB, etc.).
+ *
+ * @return: None
+ *
+ */
+void phal_gpio_deinit(gpio_reg_def_t *p_gpiox);
+
+/**
+ * @brief Reads the state of a specific GPIO pin
+ * Retrieves and returns the current logical state (high or low) of the
+ * specified GPIO pin in the given GPIO module.
+ *
+ * @param p_gpiox: Pointer to the register structures of the GPIO module
+ *                 containing the target pin (e.g., GPIOA, GPIOB, etc.).
+ *
+ * @param pin_no:  The pin number of the GPIO module to be read.
+ *
+ * @return: The logical state of the specified GPIO pin (1 for high, 0 for low).
+ *
+ */
+uint8_t phal_gpio_read_pin(gpio_reg_def_t *p_gpiox, uint8_t pin_no);
+
+/**
+ * @brief Reads the state of all GPIO pins in a GPIO port
+ * Retrieves and returns the current logical states (high or low) of all
+ * pins in the specified GPIO module as a 16-bit value.
+ *
+ * @param p_gpiox: Pointer to the register structures of the GPIO module
+ *                 containing the target port (e.g., GPIOA, GPIOB, etc.).
+ *
+ * @return: The 16-bit value representing the logical states of all GPIO pins
+ *          in the specified GPIO port.
+ *
+ */
+uint16_t phal_gpio_read_port(gpio_reg_def_t *p_gpiox);
+
+/**
+ * @brief Writes a specific value to a GPIO pin
+ * Sets or clears the specified GPIO pin in the given GPIO module based on
+ * the provided value (1 for high, 0 for low).
+ *
+ * @param p_gpiox: Pointer to the register structures of the GPIO module
+ *                 containing the target pin (e.g., GPIOA, GPIOB, etc.).
+ *
+ * @param pin_no:  The pin number of the GPIO module to be written.
+ *
+ * @param value:   The value to be written to the specified GPIO pin
+ *                 (1 for high, 0 for low).
+ *
+ * @return: None
+ *
+ */
+void phal_gpio_write_pin(gpio_reg_def_t *p_gpiox, uint8_t pin_no, uint8_t value);
+
+/**
+ * @brief Toggles the state of a specific GPIO pin
+ * Inverts the current logical state (high to low or low to high) of
+ * the specified GPIO pin in the given GPIO module.
+ *
+ * @param p_gpiox: Pointer to the register structures of the GPIO module
+ *                 containing the target pin (e.g., GPIOA, GPIOB, etc.).
+ *
+ * @param pin_no:  The pin number of the GPIO module to be toggled.
+ *
+ * @return: None
+ *
+ */
+void phal_gpio_toggle_pin(gpio_reg_def_t *p_gpiox, uint8_t pin_no);
+
+/**
+ * @brief Writes a specific value to all GPIO pins in a GPIO port
+ * Sets or clears all pins in the specified GPIO module based on the provided value
+ * (1 for high, 0 for low).
+ *
+ * @param p_gpiox: Pointer to the register structures of the GPIO module
+ *                 containing the target port (e.g., GPIOA, GPIOB, etc.).
+ *
+ * @param value:   The value to be written to all GPIO pins in the specified port
+ *                 (1 for high, 0 for low).
+ *
+ * @return: None
+ *
+ */
+void phal_gpio_write_port(gpio_reg_def_t *p_gpiox, uint8_t value);
+
+/**
+ * @brief Configures GPIO interrupt
+ * Configures the specified GPIO interrupt with the given parameters.
+ *
+ * @param irq_no:       The IRQ number associated with the GPIO interrupt.
+ *
+ * @param irq_priority: The priority level of the GPIO interrupt.
+ *
+ * @param activite:     The trigger edge of the GPIO interrupt (rising, falling, or both).
+ *
+ * @return: None
+ *
+ */
+void phal_gpio_irq(uint8_t irq_no, uint8_t irq_priority, uint8_t activite);
+
+/**
+ * @brief Handles GPIO interrupt
+ * Handles the GPIO interrupt associated with the specified pin.
+ *
+ * @param pin_no: The pin number of the GPIO module associated with the interrupt.
+ *
+ * @return: None
+ *
+ */
+void phal_gpio_irq_handle(uint8_t pin_no);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif /* INC_PHAL_SPI_STM32F4X_H_ */

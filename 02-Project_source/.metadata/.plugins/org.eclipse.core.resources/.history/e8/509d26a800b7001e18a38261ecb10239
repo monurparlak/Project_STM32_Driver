@@ -1,0 +1,70 @@
+/*
+ * phal_spi_stm32f4x.h
+ *
+ *  Created on: Jan 19, 2024
+ *      Author: monurparlak@gmail.com
+ *
+ *  Purpose:
+ *
+ */
+
+#ifndef INC_PHAL_SPI_STM32F4X_H_
+#define INC_PHAL_SPI_STM32F4X_H_
+
+/*****************************************************************************/
+/**< Includes */
+/*****************************************************************************/
+
+#include "phal_generic_stm32f4x.h"
+
+/*****************************************************************************/
+/**< Definitions */
+/*****************************************************************************/
+
+
+
+/*****************************************************************************/
+/**< Typedef Structures */
+/*****************************************************************************/
+
+/**
+ * @brief Configuration structure for individual SPI
+ */
+typedef struct {
+	uint8_t spi_device_mode;
+	uint8_t spi_bus_config;
+	uint8_t spi_sclk_speed;
+	uint8_t spi_dff;
+	uint8_t spi_cpol;
+	uint8_t spi_cpha;
+	uint8_t spi_ssm;
+
+};
+
+/**
+ * @brief SPI handle structure
+ */
+typedef struct {
+	spi_reg_def_t *p_spix;
+	spi_config_t	*spi_config;
+
+}spi_handle_t;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif /* INC_PHAL_SPI_STM32F4X_H_ */

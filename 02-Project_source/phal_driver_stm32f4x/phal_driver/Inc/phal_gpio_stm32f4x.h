@@ -21,6 +21,9 @@
 /**< Definitions */
 /*****************************************************************************/
 
+#define PHAL_GPIO_PIN_SET    1
+#define PHAL_GPIO_PIN_RESET  0
+
 /**
  * @brief GPIO pin configuration for individual GPIO pins
  */
@@ -80,7 +83,7 @@
  * @brief Configuration structure for individual GPIO pins
  */
 typedef struct {
-    uint8_t gpio_pin_no;        /**< GPIO Pin Number */
+	uint8_t gpio_pin_no;        /**< GPIO Pin Number */
     uint8_t gpio_pin_mode;      /**< GPIO Pin Mode (e.g., Input, Output, Alternate Function, etc.) */
     uint8_t gpio_pin_speed;     /**< GPIO Pin Speed (e.g., Low, Medium, High) */
     uint8_t gpio_pin_pupd;      /**< GPIO Pin Pull-up/Pull-down Configuration */
